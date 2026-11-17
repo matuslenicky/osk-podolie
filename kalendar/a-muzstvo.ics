@@ -1,0 +1,245 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//OŠK Podolie//Zapasy//SK
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:OŠK Podolie – A-mužstvo
+X-WR-TIMEZONE:Europe/Bratislava
+BEGIN:VTIMEZONE
+TZID:Europe/Bratislava
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:zapas-6a4f3e43d14e91f303296e80@osk-podolie.sportnet
+DTSTAMP:20261117T145728Z
+DTSTART;TZID=Europe/Bratislava:20260808T110000
+DURATION:PT2H
+SUMMARY:A-mužstvo: OŠK Podolie – FK Košeca
+DESCRIPTION:VI. liga Sever\, 1. kolo\nDomáci zápas
+END:VEVENT
+BEGIN:VEVENT
+UID:zapas-6a4f3e44d14e91f303296f96@osk-podolie.sportnet
+DTSTAMP:20261117T145728Z
+DTSTART;TZID=Europe/Bratislava:20260816T170000
+DURATION:PT2H
+SUMMARY:A-mužstvo: TJ Spartak Lysá pod Makytou – OŠK Podolie 5:0
+DESCRIPTION:VI. liga Sever\, 2. kolo\nZápas vonku
+LOCATION:Štadión TJ Spartak Lysá pod Makytou
+END:VEVENT
+BEGIN:VEVENT
+UID:zapas-6a4f3e44d14e91f303296ff3@osk-podolie.sportnet
+DTSTAMP:20261117T145728Z
+DTSTART;TZID=Europe/Bratislava:20260823T170000
+DURATION:PT2H
+SUMMARY:A-mužstvo: OŠK Podolie – FK Kľúčové 4:4
+DESCRIPTION:VI. liga Sever\, 3. kolo\nDomáci zápas
+LOCATION:Futbalový štadión OŠK Podolie
+END:VEVENT
+BEGIN:VEVENT
+UID:zapas-6a4f3e44d14e91f3032970a9@osk-podolie.sportnet
+DTSTAMP:20261117T145728Z
+DTSTART;TZID=Europe/Bratislava:20260830T170000
+DURATION:PT2H
+SUMMARY:A-mužstvo: TJ Slovan Košecké Podhradie – OŠK Podolie 3:0
+DESCRIPTION:VI. liga Sever\, 4. kolo\nZápas vonku
+LOCATION:TJ Slovan Košecké Podhradie
+END:VEVENT
+BEGIN:VEVENT
+UID:zapas-6a4f3e44d14e91f303297129@osk-podolie.sportnet
+DTSTAMP:20261117T145728Z
+DTSTART;TZID=Europe/Bratislava:20260905T160000
+DURATION:PT2H
+SUMMARY:A-mužstvo: OŠK Podolie – TJ Štart Tuchyňa 1:2
+DESCRIPTION:VI. liga Sever\, 5. kolo\nDomáci zápas
+LOCATION:Futbalový štadión OŠK Podolie
+END:VEVENT
+BEGIN:VEVENT
+UID:zapas-6a4f3e45d14e91f3032972d8@osk-podolie.sportnet
+DTSTAMP:20261117T145728Z
+DTSTART;TZID=Europe/Bratislava:20260913T160000
+DURATION:PT2H
+SUMMARY:A-mužstvo: TJ Tatran Ladce – OŠK Podolie 2:0
+DESCRIPTION:VI. liga Sever\, 6. kolo\nZápas vonku
+LOCATION:TJ Tatran Cementáreň Ladce
+END:VEVENT
+BEGIN:VEVENT
+UID:zapas-6a4f3e45d14e91f3032973db@osk-podolie.sportnet
+DTSTAMP:20261117T145728Z
+DTSTART;TZID=Europe/Bratislava:20260920T153000
+DURATION:PT2H
+SUMMARY:A-mužstvo: OŠK Slovan Beckov – OŠK Podolie 3:4
+DESCRIPTION:VI. liga Sever\, 7. kolo\nZápas vonku
+LOCATION:OŠK Slovan Beckov
+END:VEVENT
+BEGIN:VEVENT
+UID:zapas-6a4f3e45d14e91f3032972c0@osk-podolie.sportnet
+DTSTAMP:20261117T145728Z
+DTSTART;TZID=Europe/Bratislava:20260926T153000
+DURATION:PT2H
+SUMMARY:A-mužstvo: OŠK Podolie – TJ Plevník - Drienové 2:3
+DESCRIPTION:VI. liga Sever\, 8. kolo\nDomáci zápas
+LOCATION:Futbalový štadión OŠK Podolie
+END:VEVENT
+BEGIN:VEVENT
+UID:zapas-6a4f3e45d14e91f303297677@osk-podolie.sportnet
+DTSTAMP:20261117T145728Z
+DTSTART;TZID=Europe/Bratislava:20261004T150000
+DURATION:PT2H
+SUMMARY:A-mužstvo: TJ Vápeč Horná Poruba – OŠK Podolie 11:2
+DESCRIPTION:VI. liga Sever\, 9. kolo\nZápas vonku
+LOCATION:Horná Poruba
+END:VEVENT
+BEGIN:VEVENT
+UID:zapas-6a4f3e46d14e91f303297950@osk-podolie.sportnet
+DTSTAMP:20261117T145728Z
+DTSTART;TZID=Europe/Bratislava:20261010T150000
+DURATION:PT2H
+SUMMARY:A-mužstvo: OŠK Podolie – FK Nová Dubnica 2:1
+DESCRIPTION:VI. liga Sever\, 10. kolo\nDomáci zápas
+LOCATION:Futbalový štadión OŠK Podolie
+END:VEVENT
+BEGIN:VEVENT
+UID:zapas-6a4f3e46d14e91f30329777c@osk-podolie.sportnet
+DTSTAMP:20261117T145728Z
+DTSTART;TZID=Europe/Bratislava:20261018T140000
+DURATION:PT2H
+SUMMARY:A-mužstvo: TJ Považan Pruské – OŠK Podolie 2:1
+DESCRIPTION:VI. liga Sever\, 11. kolo\nZápas vonku
+LOCATION:Futbalový štadión TJ Považan Pruské
+END:VEVENT
+BEGIN:VEVENT
+UID:zapas-6a4f3e47d14e91f303297ce3@osk-podolie.sportnet
+DTSTAMP:20261117T145728Z
+DTSTART;TZID=Europe/Bratislava:20261024T140000
+DURATION:PT2H
+SUMMARY:A-mužstvo: OŠK Podolie – FK Melčice-Lieskové 5:2
+DESCRIPTION:VI. liga Sever\, 12. kolo\nDomáci zápas
+LOCATION:Futbalový štadión OŠK Podolie
+END:VEVENT
+BEGIN:VEVENT
+UID:zapas-6a4f3e46d14e91f30329785c@osk-podolie.sportnet
+DTSTAMP:20261117T145728Z
+DTSTART;TZID=Europe/Bratislava:20261101T140000
+DURATION:PT2H
+SUMMARY:A-mužstvo: FKS Nemšová – OŠK Podolie 3:2
+DESCRIPTION:VI. liga Sever\, 13. kolo\nZápas vonku
+LOCATION:FK Slovan Nemšová
+END:VEVENT
+BEGIN:VEVENT
+UID:zapas-6a4f3e46d14e91f303297b4f@osk-podolie.sportnet
+DTSTAMP:20261117T145728Z
+DTSTART;TZID=Europe/Bratislava:20270321T150000
+DURATION:PT2H
+SUMMARY:A-mužstvo: FK Košeca – OŠK Podolie
+DESCRIPTION:VI. liga Sever\, 14. kolo\nZápas vonku
+END:VEVENT
+BEGIN:VEVENT
+UID:zapas-6a4f3e46d14e91f303297a42@osk-podolie.sportnet
+DTSTAMP:20261117T145728Z
+DTSTART;TZID=Europe/Bratislava:20270328T150000
+DURATION:PT2H
+SUMMARY:A-mužstvo: OŠK Podolie – TJ Spartak Lysá pod Makytou
+DESCRIPTION:VI. liga Sever\, 15. kolo\nDomáci zápas
+END:VEVENT
+BEGIN:VEVENT
+UID:zapas-6a4f3e47d14e91f303297c4f@osk-podolie.sportnet
+DTSTAMP:20261117T145728Z
+DTSTART;TZID=Europe/Bratislava:20270404T160000
+DURATION:PT2H
+SUMMARY:A-mužstvo: FK Kľúčové – OŠK Podolie
+DESCRIPTION:VI. liga Sever\, 16. kolo\nZápas vonku
+END:VEVENT
+BEGIN:VEVENT
+UID:zapas-6a4f3e46d14e91f303297b2e@osk-podolie.sportnet
+DTSTAMP:20261117T145728Z
+DTSTART;TZID=Europe/Bratislava:20270411T160000
+DURATION:PT2H
+SUMMARY:A-mužstvo: OŠK Podolie – TJ Slovan Košecké Podhradie
+DESCRIPTION:VI. liga Sever\, 17. kolo\nDomáci zápas
+END:VEVENT
+BEGIN:VEVENT
+UID:zapas-6a4f3e47d14e91f303297c6d@osk-podolie.sportnet
+DTSTAMP:20261117T145728Z
+DTSTART;TZID=Europe/Bratislava:20270418T163000
+DURATION:PT2H
+SUMMARY:A-mužstvo: TJ Štart Tuchyňa – OŠK Podolie
+DESCRIPTION:VI. liga Sever\, 18. kolo\nZápas vonku
+END:VEVENT
+BEGIN:VEVENT
+UID:zapas-6a4f3e48d14e91f303298177@osk-podolie.sportnet
+DTSTAMP:20261117T145728Z
+DTSTART;TZID=Europe/Bratislava:20270424T163000
+DURATION:PT2H
+SUMMARY:A-mužstvo: OŠK Podolie – TJ Tatran Ladce
+DESCRIPTION:VI. liga Sever\, 19. kolo\nDomáci zápas
+END:VEVENT
+BEGIN:VEVENT
+UID:zapas-6a4f3e47d14e91f303297d73@osk-podolie.sportnet
+DTSTAMP:20261117T145728Z
+DTSTART;TZID=Europe/Bratislava:20270502T170000
+DURATION:PT2H
+SUMMARY:A-mužstvo: OŠK Podolie – OŠK Slovan Beckov
+DESCRIPTION:VI. liga Sever\, 20. kolo\nDomáci zápas
+END:VEVENT
+BEGIN:VEVENT
+UID:zapas-6a4f3e48d14e91f30329829f@osk-podolie.sportnet
+DTSTAMP:20261117T145728Z
+DTSTART;TZID=Europe/Bratislava:20270509T170000
+DURATION:PT2H
+SUMMARY:A-mužstvo: TJ Plevník - Drienové – OŠK Podolie
+DESCRIPTION:VI. liga Sever\, 21. kolo\nZápas vonku
+END:VEVENT
+BEGIN:VEVENT
+UID:zapas-6a4f3e47d14e91f303297f72@osk-podolie.sportnet
+DTSTAMP:20261117T145728Z
+DTSTART;TZID=Europe/Bratislava:20270516T170000
+DURATION:PT2H
+SUMMARY:A-mužstvo: OŠK Podolie – TJ Vápeč Horná Poruba
+DESCRIPTION:VI. liga Sever\, 22. kolo\nDomáci zápas
+END:VEVENT
+BEGIN:VEVENT
+UID:zapas-6a4f3e48d14e91f3032984b9@osk-podolie.sportnet
+DTSTAMP:20261117T145728Z
+DTSTART;TZID=Europe/Bratislava:20270523T170000
+DURATION:PT2H
+SUMMARY:A-mužstvo: FK Nová Dubnica – OŠK Podolie
+DESCRIPTION:VI. liga Sever\, 23. kolo\nZápas vonku
+END:VEVENT
+BEGIN:VEVENT
+UID:zapas-6a4f3e49d14e91f30329864d@osk-podolie.sportnet
+DTSTAMP:20261117T145728Z
+DTSTART;TZID=Europe/Bratislava:20270530T170000
+DURATION:PT2H
+SUMMARY:A-mužstvo: OŠK Podolie – TJ Považan Pruské
+DESCRIPTION:VI. liga Sever\, 24. kolo\nDomáci zápas
+END:VEVENT
+BEGIN:VEVENT
+UID:zapas-6a4f3e48d14e91f303298537@osk-podolie.sportnet
+DTSTAMP:20261117T145728Z
+DTSTART;TZID=Europe/Bratislava:20270606T170000
+DURATION:PT2H
+SUMMARY:A-mužstvo: FK Melčice-Lieskové – OŠK Podolie
+DESCRIPTION:VI. liga Sever\, 25. kolo\nZápas vonku
+END:VEVENT
+BEGIN:VEVENT
+UID:zapas-6a4f3e49d14e91f303298714@osk-podolie.sportnet
+DTSTAMP:20261117T145728Z
+DTSTART;TZID=Europe/Bratislava:20270613T170000
+DURATION:PT2H
+SUMMARY:A-mužstvo: OŠK Podolie – FKS Nemšová
+DESCRIPTION:VI. liga Sever\, 26. kolo\nDomáci zápas
+END:VEVENT
+END:VCALENDAR
