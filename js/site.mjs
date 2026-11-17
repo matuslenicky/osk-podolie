@@ -9,14 +9,13 @@ if (menuBtn && menu && typeof menu.showModal === 'function') {
   menuBtn.addEventListener('click', () => { menu.showModal(); document.documentElement.classList.add('menu-open'); });
   menu.addEventListener('close', () => { document.documentElement.classList.remove('menu-open'); menuBtn.focus(); });
   $('[data-close]', menu).addEventListener('click', close);
-  // klik na odkaz alebo na stmavené pozadie pod panelom (cieľ je vtedy samotný <dialog>, mimo jeho obdĺžnika)
+  // klik na odkaz alebo na stmavené pozadie: cieľ je vtedy samotný <dialog> – mimo jeho obdĺžnika, v priehľadných okrajoch
+  // vedľa zástavy alebo v záreze lastovičieho chvosta (clip-path prepustí klik na <dialog>)
   menu.addEventListener('click', (e) => {
     if (e.target.closest('a')) return close();
-    if (e.target !== menu) return;
-    const r = menu.getBoundingClientRect();
-    if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) close();
+    if (e.target === menu) close();
   });
-  matchMedia('(min-width: 960px)').addEventListener('change', (e) => { if (e.matches) close(); });
+  matchMedia('(min-width: 1000px)').addEventListener('change', (e) => { if (e.matches) close(); }); // od 1000 px je menu v hlavičke (site.css)
 }
 
 // ---- odpočet do výkopu ----
