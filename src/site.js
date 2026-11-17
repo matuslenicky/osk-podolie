@@ -19,7 +19,6 @@ add('', {
   title: 'futbal v Podolí', active: '', bodyClass: 'home',
   body: (R) => {
     const n = nextA;
-    const wl = winterLine();
     return `<section class="intro"><div class="wrap intro-in">
   <img src="${R}img/erb-240.webp" alt="${esc(club.erbAlt)}" width="${Math.round(112 * CREST_R)}" height="112">
   <div>
@@ -27,9 +26,8 @@ add('', {
     <p class="intro-p">${esc(A.leagueName)}${A.pos ? `, ${A.pos}. miesto ${zo(A.of)}` : ''}. V klube ${teams.length >= 2 && teams.length <= 4 ? 'hrajú' : 'hrá'} ${plural(teams.length, 'tím', 'tímy', 'tímov')}, od prípravky po áčko.</p>
   </div>
 </div></section>
-${n ? band('Najbližší zápas', 'nx-h', `<p class="big">${n.home ? `Podolie – ${esc(n.opponent)}` : `${esc(n.opponent)} – Podolie`}</p>
-  <p class="meta"><time datetime="${n.date}">${dLong(n.date)}</time>, ${esc(n.time || '')} · ${n.home ? esc(ST.nazov) : 'vonku'}${wl ? '' : ` · <span class="cd" data-kickoff="${isoLocal(n.date, n.time)}" hidden></span>`}</p>
-  ${wl ? `<p class="meta">${wl}</p>` : ''}
+${n ? band('Najbližší zápas', 'nx-h', `<p class="big">${n.home ? `Podolie${NB}– ${glueAbbr(esc(n.opponent))}` : `${glueAbbr(esc(n.opponent))}${NB}– Podolie`}</p>
+  <p class="meta"><time datetime="${n.date}">${dLong(n.date)}</time>, ${esc(n.time || '')} · ${n.home ? esc(ST.nazov) : 'vonku'}${winterNow ? ' · po zimnej prestávke' : ` · <span class="cd" data-kickoff="${isoLocal(n.date, n.time)}" hidden></span>`}</p>
   <p class="btns"><a class="btn" href="${R}kalendar/zapas-${n.id}.ics" download>${I.cal}Do kalendára</a><a class="btn btn--line" href="${R}${n.url}">Detail</a></p>`, 'band--first') : ''}
 ${band('Zápasy', 'z-h', `<div class="cols2"><div><h3 class="h3">Výsledky</h3>${fxList(homeRes(5), R)}</div><div><h3 class="h3">Program</h3>${homeUp(5).length ? fxList(homeUp(5), R) : '<p>Ďalšie zápasy zatiaľ nie sú vyžrebované.</p>'}</div></div>${more(`${R}zapasy/`, 'Všetky zápasy')}`)}
 ${A.table ? band('Tabuľka', 't-h', `<p class="meta">${esc(A.leagueName)}</p>${tableHtml(A.table, R)}${more(`${R}tabulky/`, 'Tabuľky všetkých tímov')}`) : ''}
@@ -43,7 +41,6 @@ add('klub/', {
   body: (R) => `${pageHead({ title: 'Klub', sub: `${esc(club.pravnyNazov)}. Farby ${esc(club.farby)}.`, R, crumbs: [[null, 'Klub']] })}
 ${band('História', 'h-h', `<ol class="hist">${club.historia.map((h) => `<li><b>${esc(h.rok)}</b> ${esc(h.text)}</li>`).join('')}</ol>`, 'band--first')}
 ${band('Ročníky', 'r-h', seasonsTable(club.rocniky.zoznam))}
-${band('Úspechy', 'u-h', `<ul class="hist">${club.uspechy.map((u) => `<li><b>${esc(u.rok)}</b> ${esc(u.text)}</li>`).join('')}</ul>`)}
 ${band('Štadión', 's-h', `<p class="meta">${esc(ST.nazov)}, ${esc(ST.ulica)}</p>${facts(ST.fakty)}`, 'band--tint')}
 ${band('Podolie', 'o-h', `${facts(club.obec.fakty)}<p class="note">Zdroje: Podolské noviny 12/2025, web obce Podolie, Sportnet.</p>`)}`,
 });

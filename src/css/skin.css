@@ -1,7 +1,7 @@
-/* OŠK Podolie – „Pásy“. Biela a svetlá modrá, tmavomodrá z erbu, zlatá len v linkách. */
+/* OŠK Podolie – „Pásy“. Teplý pergamen zo zlatej z erbu, tmavomodrá z erbu, zlatá v linkách. */
 :root {
-  --bg: #fff; --paper: #fff; --ink: #1a2338; --muted: #57607a; --line: #dde3ee;
-  --navy: #1e3e78; --gold: #c9a227; --tint: #f2f6fb; --focus: #1e3e78; --link: #1e3e78;
+  --bg: #faf6ea; --paper: #fffdf6; --ink: #1d2335; --muted: #5b5848; --line: #e5dcc4;
+  --navy: #1e3e78; --gold: #c9a227; --tint: #f2ead3; --focus: #1e3e78; --link: #1e3e78;
   --disp: 'Marcellus', 'Trajan Pro', Georgia, serif;
   --text: 'Vollkorn', Georgia, 'Times New Roman', serif;
   --text-size: 1.125rem; --lh: 1.6;
@@ -21,7 +21,7 @@
 .btn--line:hover { background: var(--navy); color: #fff; }
 
 /* hlavička */
-.hdr { background: #fff; border-bottom: 1px solid var(--line); }
+.hdr { background: var(--bg); border-bottom: 1px solid var(--line); }
 .brand-n { font-size: 1.35rem; color: var(--navy); letter-spacing: .02em; }
 .brand-s { font-size: .875rem; color: var(--muted); }
 .nav a { padding: 0 12px; color: var(--ink); font-size: 1.0625rem; }
@@ -91,6 +91,12 @@
 .chip[aria-pressed="true"] { background: var(--navy); color: #fff; }
 .teams a { border-bottom: 1px solid var(--line); }
 .teams-n { font-size: 1.6rem; color: var(--navy); }
+/* „A-mužstvo“ zo Sportnetu sa nezmestí do 80px stĺpca jadra (zalomilo sa na „A-“ a prekrylo ligu):
+   prvý stĺpec podľa najdlhšieho názvu, cez subgrid rovnako široký vo všetkých riadkoch */
+.teams { display: grid; grid-template-columns: max-content minmax(0, 1fr) auto; column-gap: 16px; }
+.teams li, .teams a { grid-column: 1 / -1; display: grid; grid-template-columns: subgrid; }
+.teams-n { white-space: nowrap; }
+@media (max-width: 559.98px) { .teams-n { font-size: 1.25rem; } }
 .teams-s { font-weight: 600; }
 .join { background: var(--tint); }
 .stat b { font-size: 2.2rem; color: var(--navy); }

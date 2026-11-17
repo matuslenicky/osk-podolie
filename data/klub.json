@@ -55,7 +55,7 @@
     "citat": "Stále tvrdím, že mať stabilnú mládežnícku základňu je najpodstatnejšie pre prežitie amatérskeho, dedinského futbalu.",
     "citatKto": "prezident klubu v Podolských novinách"
   },
-  "nabor": "Dievčatá aj chlapci od 5 rokov môžu kedykoľvek prísť vyskúšať, aké je trénovať a hrať za OŠK Podolie. Zadarmo, bez vstupných aj mesačných poplatkov.",
+  "nabor": "Dievčatá aj chlapci môžu kedykoľvek prísť vyskúšať, aké je trénovať a hrať za OŠK Podolie. Bez vstupných aj mesačných poplatkov.",
   "_nabor": "Podolské noviny 12/2025 (prezident klubu)",
   "historia": [
     { "rok": "2013/14", "text": "Najstarší ročník na Sportnete: áčko hrá V. ligu Sever a končí ôsme.", "zdroj": "Sportnet" },
@@ -66,10 +66,10 @@
   "obec": {
     "_zdroj": "web obce Podolie (Základné informácie, Obecná symbolika, Pamiatky v obci, Najstaršie osídlenie); Park miniatúr – Podolské noviny 12/2025",
     "fakty": [
+      { "k": "2 200 pred n. l.", "t": "V polohe Horné Brežné preskúmali archeológovia v roku 1963 opevnené sídlisko bošáckej skupiny z konca neskorej doby kamennej." },
       { "k": "1332", "t": "Prvá písomná zmienka: v súpise pápežských desiatkov sa v Podolí uvádza farár Mikuláš." },
       { "k": "1743", "t": "Pečať obce SIGILLUM POSSESIONIS PODOLA so svätým Jurajom. Z nej vychádza dnešný erb, ktorý nosí aj futbalový klub." },
       { "k": "Kostol sv. Juraja", "t": "Kostol spomínaný už začiatkom 14. storočia stojí na vyvýšenine nad Podolským potokom. V 17. storočí ho obohnali kamenným múrom so strieľňami, pravdepodobne po roku 1663, keď osmanské vojsko obsadilo Nové Zámky." },
-      { "k": "2 200 pred n. l.", "t": "V polohe Horné Brežné preskúmali archeológovia v roku 1963 opevnené sídlisko bošáckej skupiny z konca neskorej doby kamennej." },
       { "k": "Park miniatúr", "t": "Od roku 2003, keď pokrstili prvý model, hrad Branč, vyrástlo v Podolí viac ako sto modelov hradov a zámkov. Ročne ich príde pozrieť okolo 35 000 ľudí." }
     ]
   },
