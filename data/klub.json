@@ -50,7 +50,7 @@
       { "k": "Áčko", "t": "Po jeseni 2025 prezimovalo na 8. mieste VI. ligy Sever. Najlepším hráčom jesene bol Denis Novotný, vybrali ho aj do zostavy jesene celej súťaže." },
       { "k": "Odchovanci", "t": "Do áčka sa zapracúvajú hráči, ktorí v Podolí začínali alebo odohrali mládežnícke kategórie: Vrba, Hutta, Novotný a brankár Ohrablo, vekom ešte dorastenec." },
       { "k": "Mládež", "t": "Prípravka U11 skončila v ročníku 2024/25 šiesta z 13 tímov a na Memoriáli Daniela Šima v Bošáci tretia po výhre 9:1 v zápase o 3. miesto." },
-      { "k": "Hody", "t": "Letná príprava sa začína tradičným hodovým zápasom v Očkove, v roku 2025 sa skončil 5:5." }
+      { "k": "Hody", "t": "Letná príprava sa začína tradičným hodovým zápasom v Očkove. V roku 2025 sa skončil 5:5." }
     ],
     "citat": "Stále tvrdím, že mať stabilnú mládežnícku základňu je najpodstatnejšie pre prežitie amatérskeho, dedinského futbalu.",
     "citatKto": "prezident klubu v Podolských novinách"
@@ -61,7 +61,7 @@
     { "rok": "2013/14", "text": "Najstarší ročník na Sportnete: áčko hrá V. ligu Sever a končí ôsme.", "zdroj": "Sportnet" },
     { "rok": "2021/22", "text": "Šieste miesto v V. lige Sever so 64 strelenými gólmi, najlepší výsledok v ročníkoch na Sportnete.", "zdroj": "Sportnet" },
     { "rok": "2023/24", "text": "Po jedenástich ročníkoch v V. lige (Sever a Severozápad) áčko zostupuje do VI. ligy Sever.", "zdroj": "Sportnet" },
-    { "rok": "2025/26", "text": "Západoslovenský zväz upravil VI. ligu Sever podľa okresov: Podolie už necestuje k súperom z okresu Prievidza, hrajú v nej tímy z okresov Trenčín a Považská Bystrica. Áčko končí deviate.", "zdroj": "Podolské noviny 12/2025, Sportnet" }
+    { "rok": "2025/26", "text": "Západoslovenský zväz upravil zloženie VI. ligy Sever: Podolie už necestuje k súperom z okolia Prievidze, hrajú v nej tímy z okolia Trenčína a Považskej Bystrice. Áčko končí deviate.", "zdroj": "Podolské noviny 12/2025, Sportnet" }
   ],
   "obec": {
     "_zdroj": "web obce Podolie (Základné informácie, Obecná symbolika, Pamiatky v obci, Najstaršie osídlenie); Park miniatúr – Podolské noviny 12/2025",
@@ -70,7 +70,7 @@
       { "k": "1743", "t": "Pečať obce SIGILLUM POSSESIONIS PODOLA so svätým Jurajom. Z nej vychádza dnešný erb, ktorý nosí aj futbalový klub." },
       { "k": "Kostol sv. Juraja", "t": "Kostol spomínaný už začiatkom 14. storočia stojí na vyvýšenine nad Podolským potokom. V 17. storočí ho obohnali kamenným múrom so strieľňami, pravdepodobne po roku 1663, keď osmanské vojsko obsadilo Nové Zámky." },
       { "k": "2 200 pred n. l.", "t": "V polohe Horné Brežné preskúmali archeológovia v roku 1963 opevnené sídlisko bošáckej skupiny z konca neskorej doby kamennej." },
-      { "k": "Park miniatúr", "t": "Od roku 2003, keď pokrstili prvý model – hrad Branč, vyrástlo v Podolí viac ako sto modelov hradov a zámkov. Ročne ich príde pozrieť okolo 35 000 ľudí." }
+      { "k": "Park miniatúr", "t": "Od roku 2003, keď pokrstili prvý model, hrad Branč, vyrástlo v Podolí viac ako sto modelov hradov a zámkov. Ročne ich príde pozrieť okolo 35 000 ľudí." }
     ]
   },
   "uspechy": [
@@ -92,6 +92,7 @@
     "Futbalový klub Kľúčové": "FK Kľúčové",
     "Futbalový klub Nová Dubnica": "FK Nová Dubnica",
     "Futbalový klub Potvorice": "FK Potvorice",
-    "TJ Tatran Cementáreň Ladce": "TJ Tatran Ladce"
+    "TJ Tatran Cementáreň Ladce": "TJ Tatran Ladce",
+    "TJ Plevník - Drienové": "TJ Plevník-Drienové"
   }
 }

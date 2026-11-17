@@ -2,7 +2,7 @@
  "source": "Sportnet / Futbalnet",
  "appSpace": "osk-podolie.futbalnet.sk",
  "season": "2026/2027",
- "updated": "2026-11-17T14:36:31.568Z",
+ "updated": "2026-11-17T14:57:28.185Z",
  "teams": [
   {
    "slug": "a-muzstvo",
@@ -613,7 +613,6 @@
    "url": "https://sportnet.sme.sk/futbalnet/z/5/zapas/954309",
    "half": "2:0",
    "referee": "Mária Gašparíková",
-   "audience": 225,
    "lineups": {
     "our": {
      "start": [
@@ -865,6 +864,7 @@
      }
     ]
    },
+   "audience": 225,
    "detail": true
   },
   {
@@ -966,7 +966,6 @@
    "url": "https://sportnet.sme.sk/futbalnet/z/5/zapas/954312",
    "half": "2:3",
    "referee": "Patrik Papuča",
-   "audience": 180,
    "lineups": {
     "our": {
      "start": [
@@ -1238,6 +1237,7 @@
      }
     ]
    },
+   "audience": 180,
    "detail": true
   },
   {
@@ -1258,7 +1258,7 @@
      "min": "5",
      "player": "Adrián Majerník",
      "side": "our",
-     "kind": "goal"
+     "kind": "own"
     },
     {
      "min": "6",
@@ -1393,7 +1393,6 @@
    "url": "https://sportnet.sme.sk/futbalnet/z/5/zapas/954324",
    "half": "3:0",
    "referee": "Peter Kollár",
-   "audience": 150,
    "lineups": {
     "our": {
      "start": [
@@ -1691,6 +1690,7 @@
      }
     ]
    },
+   "audience": 150,
    "detail": true
   },
   {
@@ -1833,7 +1833,6 @@
    "url": "https://sportnet.sme.sk/futbalnet/z/5/zapas/954325",
    "half": "1:1",
    "referee": "Jozef Sliepka",
-   "audience": 60,
    "lineups": {
     "our": {
      "start": [
@@ -2139,6 +2138,7 @@
      }
     ]
    },
+   "audience": 60,
    "detail": true
   },
   {
@@ -2542,7 +2542,6 @@
    "url": "https://sportnet.sme.sk/futbalnet/z/5/zapas/954338",
    "half": "1:0",
    "referee": "Martin Bezák",
-   "audience": 150,
    "lineups": {
     "our": {
      "start": [
@@ -2814,6 +2813,7 @@
      }
     ]
    },
+   "audience": 150,
    "detail": true
   },
   {
@@ -3039,7 +3039,6 @@
    "url": "https://sportnet.sme.sk/futbalnet/z/5/zapas/954340",
    "half": "0:1",
    "referee": "Pavol Pastorek",
-   "audience": 150,
    "lineups": {
     "our": {
      "start": [
@@ -3292,6 +3291,7 @@
      }
     ]
    },
+   "audience": 150,
    "detail": true
   },
   {
@@ -3416,7 +3416,6 @@
    "url": "https://sportnet.sme.sk/futbalnet/z/5/zapas/954351",
    "half": "0:2",
    "referee": "Filip Santa",
-   "audience": 100,
    "lineups": {
     "our": {
      "start": [
@@ -3648,6 +3647,7 @@
      }
     ]
    },
+   "audience": 100,
    "detail": true
   },
   {
@@ -4077,7 +4077,6 @@
    "url": "https://sportnet.sme.sk/futbalnet/z/5/zapas/954355",
    "half": "7:2",
    "referee": "Pavol Pastorek",
-   "audience": 100,
    "lineups": {
     "our": {
      "start": [
@@ -4355,6 +4354,7 @@
      }
     ]
    },
+   "audience": 100,
    "detail": true
   },
   {
@@ -4408,7 +4408,6 @@
    "url": "https://sportnet.sme.sk/futbalnet/z/5/zapas/954364",
    "half": "0:1",
    "referee": "Michal Košťál",
-   "audience": 100,
    "lineups": {
     "our": {
      "start": [
@@ -4654,6 +4653,7 @@
      }
     ]
    },
+   "audience": 100,
    "detail": true
   },
   {
@@ -4949,7 +4949,6 @@
    "url": "https://sportnet.sme.sk/futbalnet/z/5/zapas/954370",
    "half": "1:1",
    "referee": "Martin Bezák",
-   "audience": 150,
    "lineups": {
     "our": {
      "start": [
@@ -5213,6 +5212,7 @@
      }
     ]
    },
+   "audience": 150,
    "detail": true
   },
   {
@@ -5337,7 +5337,6 @@
    "url": "https://sportnet.sme.sk/futbalnet/z/5/zapas/954377",
    "half": "4:1",
    "referee": "Martin Manina",
-   "audience": 103,
    "lineups": {
     "our": {
      "start": [
@@ -5615,6 +5614,7 @@
      }
     ]
    },
+   "audience": 103,
    "detail": true
   },
   {
@@ -5718,7 +5718,7 @@
      "min": "70",
      "player": "Milan Ohrablo",
      "side": "our",
-     "kind": "goal"
+     "kind": "own"
     },
     {
      "min": "78",
@@ -5738,7 +5738,6 @@
    "url": "https://sportnet.sme.sk/futbalnet/z/5/zapas/954385",
    "half": "1:0",
    "referee": "Karol Oselský",
-   "audience": 100,
    "lineups": {
     "our": {
      "start": [
@@ -6024,6 +6023,7 @@
      }
     ]
    },
+   "audience": 100,
    "detail": true
   },
   {

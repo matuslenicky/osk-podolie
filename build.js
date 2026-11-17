@@ -67,7 +67,7 @@ const teams = sn.teams.map((t) => {
   const pos = table?.rows.find((r) => r.our);
   return {
     ...t, url: `timy/${t.slug}/`, code: t.adult ? t.slug[0] : norm(t.short).replace(/-/g, ''),
-    full: t.adult ? t.short : `${t.short} ${t.sub}`,
+    full: t.adult ? t.short : `${t.sub} ${t.short}`,
     leagueName: league ? compName(league.name) : '', leagueKey: league?.key || '', table, pos: pos?.pos || null, of: table?.rows.length || 0,
   };
 });
@@ -261,12 +261,16 @@ ${body}
 }
 
 // ---- spoločné bloky ------------------------------------------------------------------------------
+// nadpis s iniciálou: iniciála ako inline-grid by Chrome v prístupnom mene oddelil medzerou („Z ápasy“), preto vizuálna
+// podoba je aria-hidden a čítačka dostane celé slovo zo skrytého textu (overené v AX strome Chrome)
+// iniciála len pri nadpise, ktorý začína veľkým a malým písmenom („Zápasy“), nie pri „A-mužstvo“ či „OŠK Podolie – …“
+const iniTitle = (t, force = false) => (!force && !/^\p{Lu}\p{Ll}/u.test(t) ? t : `<span aria-hidden="true"><span class="ini">${t.slice(0, 1)}</span>${t.slice(1)}</span><span class="sr">${t}</span>`);
 // hlavička podstránky: pergamen, nadpis s iniciálou v modrom poli, dole šnúra zástaviek (CSS)
 const pageHead = ({ title, sub = '', crumbs = [], R, aside = '' }) => {
   const t = esc(title).replace(/(^|\s)(TJ|FK|FC|MFK|MFC|OŠK|ŠK|OFK|MŠK|PFK|ZFC|TFK|SDM|AFC|OTJ|ŠC|PŠK|FKS) (?=\S)/g, `$1$2${NB}`);
   return `<section class="phead"><div class="wrap phead-in">
   <div>${crumbs.length ? `<nav class="crumbs" aria-label="Omrvinky"><a href="${R}">Úvod</a>${crumbs.map(([u, x]) => u ? `<a href="${R}${u}">${esc(x)}</a>` : `<span aria-current="page">${esc(x)}</span>`).join('')}</nav>` : ''}
-  <h1 class="h1"><span class="ini">${t.slice(0, 1)}</span>${t.slice(1)}</h1>${sub ? `<p class="phead-sub">${sub}</p>` : ''}</div>${aside}
+  <h1 class="h1">${iniTitle(t)}</h1>${sub ? `<p class="phead-sub">${sub}</p>` : ''}</div>${aside}
 </div></section>`;
 };
 const secHead = (h, id, moreLink = '', eyebrow = '') => `<div class="sec-head"><div>${eyebrow ? `<p class="eyebrow">${eyebrow}</p>` : ''}<h2 class="h2" id="${id}">${h}</h2></div>${moreLink}</div>`;
@@ -402,20 +406,20 @@ add('', {
     const winter = first && (dObj(first.date) - dObj(TODAY)) / 864e5 > 14;
     const winterText = !first ? '' : aNext && aNext.date === first.date
       ? `Jar sa začína ${dWhen(first.date)}, áčko v ten deň hrá ${aNext.home ? 'doma proti' : 'vonku na ihrisku'} ${esc(aNext.opponent)}.`
-      : `Prvé jarné zápasy sú ${dWhen(first.date)} (${esc(first.teamObj.full)})${aNext ? `, áčko začína ${dWhen(aNext.date)} ${aNext.home ? 'doma proti' : 'vonku na ihrisku'} ${esc(aNext.opponent)}` : ''}.`;
+      : `${upcoming.filter((m) => m.date === first.date).length > 1 ? 'Prvé jarné zápasy sú' : 'Prvý jarný zápas je'} ${dWhen(first.date)} (${esc(first.teamObj.adult ? first.teamObj.full : `${first.teamObj.short} ${first.teamObj.sub.toLowerCase()}`)})${aNext ? `, áčko začína ${dWhen(aNext.date)} ${aNext.home ? 'doma proti' : 'vonku na ihrisku'} ${esc(aNext.opponent)}` : ''}.`;
     const aPick = cardPick(A.slug);
     const youth = teams.filter((t) => !t.adult);
     return `<section class="hero" aria-labelledby="hero-h"><div class="wrap hero-in">
   <div class="hero-copy">
     <p class="eyebrow">Obecný športový klub · ročník ${SEASON}</p>
-    <h1 class="hero-h" id="hero-h"><span class="ini">O</span>ŠK Podolie</h1>
-    <p class="hero-p">Futbal pod erbom so svätým Jurajom, ktorý zlatou kopijou prebodáva draka. Áčko hrá ${esc(acc(A.leagueName))}${A.pos ? ` a ${winterNow ? 'po jeseni ' : ''}je na ${A.pos}. mieste ${zo(A.of)}` : ''}, mládež ${esc(youthNames())} súťaže Oblastného futbalového zväzu Trenčín.</p>
+    <h1 class="hero-h" id="hero-h">${iniTitle(esc(club.nazov), true)}</h1>
+    <p class="hero-p">Futbal pod erbom so svätým Jurajom, ktorý zlatou kopijou prebodáva draka. Áčko hrá ${esc(acc(A.leagueName))}${A.pos ? ` a ${winterNow ? 'po jeseni ' : ''}je na ${A.pos}. mieste ${zo(A.of)}` : ''}, mládež ${esc(youthNames())} hrá súťaže Oblastného futbalového zväzu Trenčín.</p>
     <p class="hero-cta"><a class="btn btn--gold" href="${R}zapasy/">Program a výsledky</a><a class="btn btn--ghost" href="${R}mladez/">Nábor detí zadarmo</a></p>
   </div>
   <figure class="banner">
     <div class="banner-pole" aria-hidden="true"></div>
     <div class="banner-cloth"><img src="${R}img/erb-480.webp" alt="${esc(club.erbAlt)}" width="216" height="244" fetchpriority="high"><span class="banner-t" aria-hidden="true">Podolie</span></div>
-    <figcaption>Erb obce na drese klubu, podľa pečate z roku 1743</figcaption>
+    <figcaption>Erb obce aj klubu, podľa pečate z roku 1743</figcaption>
   </figure>
 </div></section>
 <div class="bunting" aria-hidden="true"></div>
@@ -520,7 +524,7 @@ for (const m of matches) {
       const ev = [...(m.goals || []).map((g) => ({ ...g, t: 'goal' })), ...(m.cards || []).map((c) => ({ ...c, t: 'card' })), ...((m.lineups?.subs) || []).map((s) => ({ ...s, t: 'sub' }))]
         .sort((a, b) => (parseInt(a.min, 10) || 0) - (parseInt(b.min, 10) || 0));
       const evIcon = (e) => e.t === 'goal' ? `<span class="ev-i ev-goal" aria-hidden="true">${I.ball}</span>` : e.t === 'card' ? `<span class="ev-i ev-card ev-card--${e.kind}" aria-hidden="true"></span>` : '<span class="ev-i ev-sub" aria-hidden="true">⇄</span>';
-      const evText = (e) => e.t === 'goal' ? `Gól: ${esc(e.player)}${e.kind === 'penalty' ? ' (z penalty)' : e.kind === 'own' ? ' (vlastný)' : ''}` : e.t === 'card' ? `${e.kind === 'yellow' ? 'Žltá karta' : e.kind === 'red' ? 'Červená karta' : 'Druhá žltá a červená'}: ${esc(e.player)}` : `Striedanie: prichádza ${esc(e.in)}, odchádza ${esc(e.out)}`;
+      const evText = (e) => e.t === 'goal' ? (e.kind === 'own' ? `Vlastný gól: ${esc(e.player)}` : `Gól: ${esc(e.player)}${e.kind === 'penalty' ? ' (z penalty)' : ''}`) : e.t === 'card' ? `${e.kind === 'yellow' ? 'Žltá karta' : e.kind === 'red' ? 'Červená karta' : 'Druhá žltá a červená'}: ${esc(e.player)}` : `Striedanie: prichádza ${esc(e.in)}, odchádza ${esc(e.out)}`;
       const evSide = (e) => ((e.side === 'our') === m.home ? 'h' : 'a');
       const evTeam = (e) => (e.side === 'our' ? club.nazov : m.opponent);
       const prevMeet = matches.filter((x) => x.oppSpace === m.oppSpace && x.id !== m.id && x.team === m.team && x.score);
@@ -639,12 +643,12 @@ add('mladez/', {
 // klub, kronika a obec
 add('klub/', {
   title: 'Klub a kronika', active: 'klub/', desc: `${club.nazov}: kronika ročníkov áčka od 2013/14 (jedenásť ročníkov v V. lige), rok 2025 v klube a obec Podolie s erbom svätého Juraja.`,
-  body: (R) => `${pageHead({ title: 'Klub a kronika', sub: `${esc(club.pravnyNazov)}, farby ${esc(club.farby)}. Na erbe klubu je erb obce so svätým Jurajom.`, R, crumbs: [[null, 'Klub']] })}
+  body: (R) => `${pageHead({ title: 'Klub a kronika', sub: `${esc(club.pravnyNazov)}, farby erbu ${esc(club.farby)}. Na erbe klubu je erb obce so svätým Jurajom.`, R, crumbs: [[null, 'Klub']] })}
 <section class="sec sec--first"><div class="wrap klub-grid">
   <div>
     <h2 class="h2">Z kroniky</h2>
-    <ol class="annals">${club.historia.map((x) => `<li><p class="annals-y">${esc(x.rok)}</p><div><p>${esc(x.text)}</p><small>${esc(x.zdroj)}</small></div></li>`).join('')}<li class="annals-now"><p class="annals-y">${SEASON}</p><div><p>Áčko hrá ${esc(acc(A.leagueName))}${A.pos ? ` a ${winterNow ? 'po jeseni ' : ''}je na ${A.pos}. mieste` : ''}, mládež ${esc(youthNames())}.</p><small>Sportnet</small></div></li></ol>
-    <p class="note">Rok založenia klubu v zdrojoch, ktoré sme mali k dispozícii, neuvádzajú. Doplní ho klub.</p>
+    <ol class="annals">${club.historia.map((x) => `<li><p class="annals-y">${esc(x.rok)}</p><div><p>${esc(x.text)}</p><small>${esc(x.zdroj)}</small></div></li>`).join('')}<li class="annals-now"><p class="annals-y">${SEASON}</p><div><p>Áčko hrá ${esc(acc(A.leagueName))}${A.pos ? ` a ${winterNow ? 'po jeseni ' : ''}je na ${A.pos}. mieste` : ''}, mládež ${esc(youthNames())} hrá súťaže Oblastného futbalového zväzu Trenčín.</p><small>Sportnet</small></div></li></ol>
+    <p class="note">Rok založenia klubu sme v dostupných zdrojoch nenašli. Doplní ho klub.</p>
   </div>
   <aside class="klub-aside">
     <img src="${R}img/erb-480.webp" alt="${esc(club.erbAlt)}" width="160" height="181" loading="lazy">
@@ -710,7 +714,7 @@ add('kontakt/', {
     <div><dt>Názov</dt><dd>${esc(club.pravnyNazov)}</dd></div>
     <div><dt>Adresa</dt><dd>${club.adresa.map(esc).join(', ')}</dd></div>
     <div><dt>Ihrisko</dt><dd>${esc(ST.nazov)}</dd></div>
-    <div><dt>Farby</dt><dd>${esc(club.farby)}</dd></div>
+    <div><dt>Farby erbu</dt><dd>${esc(club.farby)}</dd></div>
   </dl>
   <div>
     <h2 class="h3">Klub na webe</h2>
@@ -718,7 +722,7 @@ add('kontakt/', {
       <li><a href="${club.sportnetUrl}" rel="noopener">${I.ext}<span>Profil klubu na Sportnete</span><small>zápisy o stretnutí, súpisky, prestupy</small></a></li>
       <li><a href="${club.noviny}" rel="noopener">${I.ext}<span>Podolské noviny</span><small>noviny obce, v decembri rubrika o celom roku v klube</small></a></li>
     </ul>
-    <p class="src">Vlastný web ani sociálne siete klubu sme nenašli. 2 % dane môžete poukázať občianskemu združeniu OŠK Podolie.</p>
+    <p class="src">Vlastný web ani sociálne siete klubu sme nenašli. Podľa Podolských novín 12/2025 môžete 2 % dane poukázať občianskemu združeniu OŠK Podolie.</p>
   </div>
 </div></section>`,
 });
@@ -836,6 +840,9 @@ const typo = (html) => html.split(/(<script[\s\S]*?<\/script>|<style[\s\S]*?<\/s
   .replace(/\b(U\d{1,2}) ([A-D])\b/g, `$1${NB}$2`) // „U15 A“ sa nerozdelí
   .replace(/(?<=^|[\s(])(po|ut|st|št|pi|so|ne) (?=\d{1,2}\.)/g, `$1${NB}`) // „ne 15. 11.“
   .replace(/(\d\.) (?=(?:kol[oae]|miest[oea])\b)/g, `$1${NB}`)
+  .replace(/(?<![\d.])(\d{1,2}\.) (?=[a-záäčďéíĺľňóôŕšťúýž])/g, `$1${NB}`) // „14. storočia“, „3. mieste“ (radová číslovka s podstatným menom)
+  .replace(/(?<=^|[\s(])sv\. (?=\S)/g, `sv.${NB}`) // „sv. Juraja“
+  .replace(/\bpred n\. l\./g, `pred${NB}n.${NB}l.`)
   .replace(/\b(\d{1,2}\.) (?=(?:\d{1,2}\.|januára|februára|marca|apríla|mája|júna|júla|augusta|septembra|októbra|novembra|decembra)(?!\d))/g, `$1${NB}`) // „7. marca“, „15. 11.“
   .replace(/\b([IVX]{1,4}\.) (?=lig)/g, `$1${NB}`) // „V. liga“
   .replace(/\b(\d{3}) (\d{2})\b/g, `$1${NB}$2`) // PSČ 913 11
