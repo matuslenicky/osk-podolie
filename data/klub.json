@@ -1,0 +1,97 @@
+{
+  "_zdroj": "Ručne zapísané len zo zverejnených zdrojov (uvedené pri každej časti). Nič nedopĺňať odhadom – chýbajúce údaje dodá klub.",
+  "nazov": "OŠK Podolie",
+  "kratky": "Podolie",
+  "pravnyNazov": "Obecný športový klub Podolie",
+  "_pravnyNazov": "Sportnet (Obecný športový klub Podolie); klub je občianske združenie (Podolské noviny 12/2025)",
+  "mesto": "Podolie",
+  "farby": "modrá, biela a zlatá",
+  "_farby": "erb obce na erbe klubu (Sportnet): modrý štít, strieborný rytier, zlatá kopija",
+  "erbAlt": "Erb OŠK Podolie, totožný s erbom obce: v modrom štíte strieborný rytier na striebornom koni s červeným chocholom, zlatou kopijou prebodáva zeleného draka",
+  "adresa": ["Hlavná", "916 22 Podolie"],
+  "_adresa": "Sportnet (ulica Hlavná, PSČ 916 22)",
+  "kontakt": { "email": "tom.bobocky@gmail.com" },
+  "_kontakt": "Sportnet (kontakt klubu)",
+  "sportnetUrl": "https://sportnet.sme.sk/futbalnet/k/osk-podolie/",
+  "noviny": "https://www.podolie.sk/podolske-noviny/",
+  "_noviny": "Podolské noviny, noviny obce – v decembrovom čísle rubrika „Rok v obecnom športovom klube Podolie“ (hodnotia tréneri a prezident klubu)",
+  "stadion": {
+    "_zdroj": "Sportnet (názov, poloha, ulica); Podolské noviny 12/2025 (trávnik, zimná príprava, školské športovisko)",
+    "nazov": "Futbalový štadión OŠK Podolie",
+    "geo": [48.6767715, 17.7682386],
+    "ulica": "Hlavná",
+    "fakty": [
+      { "k": "Trávnik", "t": "O hraciu plochu sa stará tréner áčka, v sezóne ju kosí trikrát do týždňa. Celú letnú prípravu odohralo áčko doma na vlastnej tráve." },
+      { "k": "Zima", "t": "Zimná príprava áčka beží na multifunkčnom ihrisku a škvárovom ovále, mládež trénuje v telocvični základnej školy." },
+      { "k": "Umelá tráva", "t": "V areáli školy vzniklo nové športovisko s ihriskom s umelou trávou a atletickou dráhou, klub ho chce využiť aj pre mládež." }
+    ]
+  },
+  "rocniky": {
+    "_zdroj": "Sportnet – konečné tabuľky áčka (dospelí) v jednotlivých sezónach, stiahnuté 17. 11. 2026",
+    "zoznam": [
+      { "rok": "2013/14", "liga": "V. liga Sever", "poz": 8, "z": 16, "skore": "63:54", "body": 44 },
+      { "rok": "2014/15", "liga": "V. liga Sever", "poz": 10, "z": 16, "skore": "43:63", "body": 36 },
+      { "rok": "2015/16", "liga": "V. liga Sever", "poz": 15, "z": 16, "skore": "32:43", "body": 36 },
+      { "rok": "2016/17", "liga": "V. liga Sever", "poz": 8, "z": 16, "skore": "49:52", "body": 39 },
+      { "rok": "2017/18", "liga": "V. liga Sever", "poz": 12, "z": 16, "skore": "40:58", "body": 27 },
+      { "rok": "2018/19", "liga": "V. liga Sever", "poz": 13, "z": 16, "skore": "29:66", "body": 23 },
+      { "rok": "2019/20", "liga": "V. liga Sever", "poz": 9, "z": 16, "skore": "29:36", "body": 22, "pozn": "nedohraná sezóna (pandémia)" },
+      { "rok": "2020/21", "liga": "V. liga Sever", "poz": 14, "z": 16, "skore": "23:38", "body": 13, "pozn": "nedohraná sezóna (pandémia)" },
+      { "rok": "2021/22", "liga": "V. liga Sever", "poz": 6, "z": 16, "skore": "64:49", "body": 50, "pozn": "najlepšie umiestnenie v ročníkoch na Sportnete", "naj": true },
+      { "rok": "2022/23", "liga": "V. liga Severozápad", "poz": 12, "z": 16, "skore": "27:73", "body": 23 },
+      { "rok": "2023/24", "liga": "V. liga Severozápad", "poz": 15, "z": 16, "skore": "28:94", "body": 12, "pozn": "po jedenástich ročníkoch v V. lige zostup" },
+      { "rok": "2024/25", "liga": "VI. liga Sever", "poz": 10, "z": 16, "skore": "41:48", "body": 40 },
+      { "rok": "2025/26", "liga": "VI. liga Sever", "poz": 9, "z": 16, "skore": "46:50", "body": 42 }
+    ]
+  },
+  "rok2025": {
+    "_zdroj": "Podolské noviny 12/2025 (Rok v obecnom športovom klube Podolie: hodnotia tréneri U11, U13, áčka a prezident klubu)",
+    "body": [
+      { "k": "Áčko", "t": "Po jeseni 2025 prezimovalo na 8. mieste VI. ligy Sever. Najlepším hráčom jesene bol Denis Novotný, vybrali ho aj do zostavy jesene celej súťaže." },
+      { "k": "Odchovanci", "t": "Do áčka sa zapracúvajú hráči, ktorí v Podolí začínali alebo odohrali mládežnícke kategórie: Vrba, Hutta, Novotný a brankár Ohrablo, vekom ešte dorastenec." },
+      { "k": "Mládež", "t": "Prípravka U11 skončila v ročníku 2024/25 šiesta z 13 tímov a na Memoriáli Daniela Šima v Bošáci tretia po výhre 9:1 v zápase o 3. miesto." },
+      { "k": "Hody", "t": "Letná príprava sa začína tradičným hodovým zápasom v Očkove, v roku 2025 sa skončil 5:5." }
+    ],
+    "citat": "Stále tvrdím, že mať stabilnú mládežnícku základňu je najpodstatnejšie pre prežitie amatérskeho, dedinského futbalu.",
+    "citatKto": "prezident klubu v Podolských novinách"
+  },
+  "nabor": "Dievčatá aj chlapci od 5 rokov môžu kedykoľvek prísť vyskúšať, aké je trénovať a hrať za OŠK Podolie. Zadarmo, bez vstupných aj mesačných poplatkov.",
+  "_nabor": "Podolské noviny 12/2025 (prezident klubu)",
+  "historia": [
+    { "rok": "2013/14", "text": "Najstarší ročník na Sportnete: áčko hrá V. ligu Sever a končí ôsme.", "zdroj": "Sportnet" },
+    { "rok": "2021/22", "text": "Šieste miesto v V. lige Sever so 64 strelenými gólmi, najlepší výsledok v ročníkoch na Sportnete.", "zdroj": "Sportnet" },
+    { "rok": "2023/24", "text": "Po jedenástich ročníkoch v V. lige (Sever a Severozápad) áčko zostupuje do VI. ligy Sever.", "zdroj": "Sportnet" },
+    { "rok": "2025/26", "text": "Západoslovenský zväz upravil VI. ligu Sever podľa okresov: Podolie už necestuje k súperom z okresu Prievidza, hrajú v nej tímy z okresov Trenčín a Považská Bystrica. Áčko končí deviate.", "zdroj": "Podolské noviny 12/2025, Sportnet" }
+  ],
+  "obec": {
+    "_zdroj": "web obce Podolie (Základné informácie, Obecná symbolika, Pamiatky v obci, Najstaršie osídlenie); Park miniatúr – Podolské noviny 12/2025",
+    "fakty": [
+      { "k": "1332", "t": "Prvá písomná zmienka: v súpise pápežských desiatkov sa v Podolí uvádza farár Mikuláš." },
+      { "k": "1743", "t": "Pečať obce SIGILLUM POSSESIONIS PODOLA so svätým Jurajom. Z nej vychádza dnešný erb, ktorý nosí aj futbalový klub." },
+      { "k": "Kostol sv. Juraja", "t": "Kostol spomínaný už začiatkom 14. storočia stojí na vyvýšenine nad Podolským potokom. V 17. storočí ho obohnali kamenným múrom so strieľňami, pravdepodobne po roku 1663, keď osmanské vojsko obsadilo Nové Zámky." },
+      { "k": "2 200 pred n. l.", "t": "V polohe Horné Brežné preskúmali archeológovia v roku 1963 opevnené sídlisko bošáckej skupiny z konca neskorej doby kamennej." },
+      { "k": "Park miniatúr", "t": "Od roku 2003, keď pokrstili prvý model – hrad Branč, vyrástlo v Podolí viac ako sto modelov hradov a zámkov. Ročne ich príde pozrieť okolo 35 000 ľudí." }
+    ]
+  },
+  "uspechy": [
+    { "rok": "2013 – 2024", "text": "jedenásť ročníkov v V. lige Sever a Severozápad" },
+    { "rok": "2021/22", "text": "6. miesto v V. lige Sever" },
+    { "rok": "2025", "text": "Denis Novotný v zostave jesene VI. ligy Sever" }
+  ],
+  "sutaze": {
+    "_pozn": "čitateľné názvy súťaží namiesto skratiek a názvov so sponzormi zo Sportnetu",
+    "Slovnaft Cup": "Slovnaft Cup",
+    "VI. liga  Sever  Macron | yoursport  ZsFZ": "VI. liga Sever",
+    "VI. liga Sever Macron | yoursport ZsFZ": "VI. liga Sever",
+    "IV. liga SŽ U15 - ObFZ TN": "IV. liga starších žiakov U15",
+    "IV. liga MŽ U13 - ObFZ TN": "IV. liga mladších žiakov U13"
+  },
+  "nazvy": {
+    "_pozn": "čitateľné názvy súperov namiesto úradných názvov a veľkých písmen zo Sportnetu",
+    "FUTBAL - FK MELČICE - LIESKOVÉ": "FK Melčice-Lieskové",
+    "Futbalový klub Kľúčové": "FK Kľúčové",
+    "Futbalový klub Nová Dubnica": "FK Nová Dubnica",
+    "Futbalový klub Potvorice": "FK Potvorice",
+    "TJ Tatran Cementáreň Ladce": "TJ Tatran Ladce"
+  }
+}
