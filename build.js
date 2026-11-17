@@ -164,6 +164,10 @@ const ourName = (t) => (t.adult ? club.nazov : `${club.kratky || club.mesto} ${t
 const glueAbbr = (s) => s.replace(/(^|\s)(TJ|FK|FC|MFK|MFC|OŠK|ŠK|OFK|MŠK|PFK|ZFC|TFK|SDM|AFC|OTJ|ŠC|PŠK|FKS) (?=\S)/g, `$1$2${NB}`);
 const venueName = (v) => v.replace(/\s+/g, ' ').trim().replace(/(^|\s)č\.\s*(\d)/g, '$1č. $2');
 const pw = (n, a, b, c) => (n === 1 ? a : n >= 2 && n <= 4 ? b : c); // tvar slova podľa počtu
+// zápasy na úvod: bez prípraviek (U11 a mladší) a bez opakovaných riadkov (rovnaký súper v ten istý deň)
+const homePick = (list, n) => { const seen = new Set(); return list.filter((m) => !isPrep(m.teamObj)).filter((m) => { const k = `${m.date}|${m.opponent}`; if (seen.has(k)) return false; seen.add(k); return true; }).slice(0, n); };
+const homeUp = (n = 5) => homePick(upcoming, n);
+const homeRes = (n = 5) => homePick(results.filter((x) => x.score), n);
 const MON3 = ['jan', 'feb', 'mar', 'apr', 'máj', 'jún', 'júl', 'aug', 'sep', 'okt', 'nov', 'dec'];
 
 // ---- kostra stránky ------------------------------------------------------------------------------
@@ -505,7 +509,7 @@ ${n ? band('Najbližší zápas', 'nx-h', `<p class="big">${n.home ? `Podolie �
   <p class="meta"><time datetime="${n.date}">${dLong(n.date)}</time>, ${esc(n.time || '')} · ${n.home ? esc(ST.nazov) : 'vonku'}${wl ? '' : ` · <span class="cd" data-kickoff="${isoLocal(n.date, n.time)}" hidden></span>`}</p>
   ${wl ? `<p class="meta">${wl}</p>` : ''}
   <p class="btns"><a class="btn" href="${R}kalendar/zapas-${n.id}.ics" download>${I.cal}Do kalendára</a><a class="btn btn--line" href="${R}${n.url}">Detail</a></p>`, 'band--first') : ''}
-${band('Zápasy', 'z-h', `<div class="cols2"><div><h3 class="h3">Výsledky</h3>${fxList(results.filter((x) => x.score).slice(0, 5), R)}</div><div><h3 class="h3">Program</h3>${upcoming.length ? fxList(upcoming.slice(0, 5), R) : '<p>Ďalšie zápasy zatiaľ nie sú vyžrebované.</p>'}</div></div>${more(`${R}zapasy/`, 'Všetky zápasy')}`)}
+${band('Zápasy', 'z-h', `<div class="cols2"><div><h3 class="h3">Výsledky</h3>${fxList(homeRes(5), R)}</div><div><h3 class="h3">Program</h3>${homeUp(5).length ? fxList(homeUp(5), R) : '<p>Ďalšie zápasy zatiaľ nie sú vyžrebované.</p>'}</div></div>${more(`${R}zapasy/`, 'Všetky zápasy')}`)}
 ${A.table ? band('Tabuľka', 't-h', `<p class="meta">${esc(A.leagueName)}</p>${tableHtml(A.table, R)}${more(`${R}tabulky/`, 'Tabuľky všetkých tímov')}`) : ''}
 ${band('Nábor', 'nb-h', `<p class="big big--s">Futbal od 5 rokov, zadarmo.</p><p>${esc(club.nabor)}</p><p class="btns"><a class="btn" href="mailto:${club.kontakt.email}?subject=${encodeURIComponent('Nábor do mládeže')}">${I.mail}Napísať trénerom</a></p>`, 'band--tint')}
 ${band('Rok 2025', 'y-h', `${facts(club.rok2025.body)}${more(`${R}klub/`, 'Klub a obec')}`)}`;
@@ -622,6 +626,7 @@ const typo = (html) => html.split(/(<script[\s\S]*?<\/script>|<style[\s\S]*?<\/s
   .replace(/(\d\.) (?=(?:kol[oae]|miest[oea])\b)/g, `$1${NB}`)
   .replace(/(?<![\d.])(\d{1,2}\.) (?=[a-záäčďéíĺľňóôŕšťúýž])/g, `$1${NB}`) // „14. storočia“, „3. mieste“ (radová číslovka s podstatným menom)
   .replace(/(?<=^|[\s(])sv\. (?=\S)/g, `sv.${NB}`) // „sv. Juraja“
+  .replace(/(\d\.) (?=[A-D] tried)/g, `$1${NB}`) // „1. A triedu“
   .replace(/\bpred n\. l\./g, `pred${NB}n.${NB}l.`)
   .replace(/\b(\d{1,2}\.) (?=(?:\d{1,2}\.|januára|februára|marca|apríla|mája|júna|júla|augusta|septembra|októbra|novembra|decembra)(?!\d))/g, `$1${NB}`) // „7. marca“, „15. 11.“
   .replace(/\b([IVX]{1,4}\.) (?=lig)/g, `$1${NB}`) // „V. liga“

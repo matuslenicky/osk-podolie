@@ -31,7 +31,7 @@ ${n ? band('Najbližší zápas', 'nx-h', `<p class="big">${n.home ? `Podolie �
   <p class="meta"><time datetime="${n.date}">${dLong(n.date)}</time>, ${esc(n.time || '')} · ${n.home ? esc(ST.nazov) : 'vonku'}${wl ? '' : ` · <span class="cd" data-kickoff="${isoLocal(n.date, n.time)}" hidden></span>`}</p>
   ${wl ? `<p class="meta">${wl}</p>` : ''}
   <p class="btns"><a class="btn" href="${R}kalendar/zapas-${n.id}.ics" download>${I.cal}Do kalendára</a><a class="btn btn--line" href="${R}${n.url}">Detail</a></p>`, 'band--first') : ''}
-${band('Zápasy', 'z-h', `<div class="cols2"><div><h3 class="h3">Výsledky</h3>${fxList(results.filter((x) => x.score).slice(0, 5), R)}</div><div><h3 class="h3">Program</h3>${upcoming.length ? fxList(upcoming.slice(0, 5), R) : '<p>Ďalšie zápasy zatiaľ nie sú vyžrebované.</p>'}</div></div>${more(`${R}zapasy/`, 'Všetky zápasy')}`)}
+${band('Zápasy', 'z-h', `<div class="cols2"><div><h3 class="h3">Výsledky</h3>${fxList(homeRes(5), R)}</div><div><h3 class="h3">Program</h3>${homeUp(5).length ? fxList(homeUp(5), R) : '<p>Ďalšie zápasy zatiaľ nie sú vyžrebované.</p>'}</div></div>${more(`${R}zapasy/`, 'Všetky zápasy')}`)}
 ${A.table ? band('Tabuľka', 't-h', `<p class="meta">${esc(A.leagueName)}</p>${tableHtml(A.table, R)}${more(`${R}tabulky/`, 'Tabuľky všetkých tímov')}`) : ''}
 ${band('Nábor', 'nb-h', `<p class="big big--s">Futbal od 5 rokov, zadarmo.</p><p>${esc(club.nabor)}</p><p class="btns"><a class="btn" href="mailto:${club.kontakt.email}?subject=${encodeURIComponent('Nábor do mládeže')}">${I.mail}Napísať trénerom</a></p>`, 'band--tint')}
 ${band('Rok 2025', 'y-h', `${facts(club.rok2025.body)}${more(`${R}klub/`, 'Klub a obec')}`)}`;
