@@ -6,16 +6,13 @@ Ukážka: https://matuslenicky.github.io/osk-podolie/ · administrácia (ukážk
 
 ## Vzhľad
 
-**„Rytier a drak“.** Klub nosí erb obce: v modrom štíte strieborný rytier na koni prebodáva zlatou kopijou zeleného draka. Erb vychádza zo svätojurskej pečate obce z roku 1743.
+**„Pásy“ (dizajn v2, 17. 11. 2026).** Biela a svetlá modrá, tmavomodrá z erbu, zlatá len v linkách. Písmo Marcellus (názvy) a Vollkorn (text).
 
-- modrá hlavička ako heraldický štít so zlatým lemom, pergamenové plochy, jemné dračie šupiny na modrých plochách,
-- úvod so **zástavou (gonfalónom) na zlatej kopiji**, v nej erb, nadpisy s **iniciálou v poli ako v iluminovanom rukopise**,
-- šnúry **trojuholníkových zástaviek** (hody, rytiersky turnaj) pod úvodom, pod hlavičkami podstránok a nad pätou,
-- program ako **zápisy v rukopise so striedavo modrou a červenou iniciálou** (deň v mesiaci),
-- výsledky ako **zástavky na šnúre**: výhra modrá so zlatým okrajom, remíza biela, prehra zelená ako drak (so šupinami), forma ako rad malých zástaviek,
-- **kronika ročníkov** áčka od 2013/14 ako kopije (dĺžka = umiestnenie, zlatá = V. liga, strieborná = VI. liga), bilancia ako **súboj rytiera s drakom**,
-- menu na telefóne ako **zástava s lastovičím chvostom**, ktorá sa spustí z hlavičky,
-- písmo **Grenze Gotisch** (nadpisy) a **Alegreya Sans** (rovné číslice sú zapečené do písma v `scripts/fonts.py`).
+- úvod je rad vodorovných pásov oddelených linkami, vľavo krátky názov pásu (na počítači sa pri posúvaní drží), vpravo obsah: najbližší zápas, zápasy, tabuľka, nábor detí od 5 rokov zadarmo a rok 2025 v klube,
+- stránka Klub v rovnakých pásoch: história, ročníky áčka, úspechy, štadión a obec,
+- menu na telefóne je tmavomodrá plocha cez celú obrazovku.
+
+Web sa skladá zo spoločného jadra v2 (`kluby-siet/engine`: `python assemble.py <web>`), vlastný je `src/site.js` (úvod, Klub, nastavenia) a `src/css/skin.css`.
 
 ## Obsah a zdroje
 

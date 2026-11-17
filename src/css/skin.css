@@ -1,0 +1,106 @@
+/* OŠK Podolie – „Pásy“. Biela a svetlá modrá, tmavomodrá z erbu, zlatá len v linkách. */
+:root {
+  --bg: #fff; --paper: #fff; --ink: #1a2338; --muted: #57607a; --line: #dde3ee;
+  --navy: #1e3e78; --gold: #c9a227; --tint: #f2f6fb; --focus: #1e3e78; --link: #1e3e78;
+  --disp: 'Marcellus', 'Trajan Pro', Georgia, serif;
+  --text: 'Vollkorn', Georgia, 'Times New Roman', serif;
+  --text-size: 1.125rem; --lh: 1.6;
+  --menu-bg: #1e3e78; --menu-ink: #fff;
+}
+.h1, .h2, .h3, .band-l, .brand-n, .big, .teams-n, .stat b, .mc-mid { font-family: var(--disp); font-weight: 400; }
+.h1 { font-size: clamp(2.4rem, 7vw, 4rem); line-height: 1.05; color: var(--navy); letter-spacing: .01em; }
+.h2 { font-size: clamp(1.6rem, 3.6vw, 2.1rem); line-height: 1.15; color: var(--navy); }
+.h3 { font-size: 1.2rem; margin-bottom: 10px; color: var(--navy); }
+.h4 { font-weight: 600; }
+.kicker { font-size: .875rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.more { margin-top: 10px; font-weight: 600; color: var(--navy); }
+.more .i { width: 15px; height: 15px; }
+.btn { background: var(--navy); color: #fff; font-weight: 600; }
+.btn:hover { background: #163064; }
+.btn--line { background: transparent; color: var(--navy); border-color: var(--navy); }
+.btn--line:hover { background: var(--navy); color: #fff; }
+
+/* hlavička */
+.hdr { background: #fff; border-bottom: 1px solid var(--line); }
+.brand-n { font-size: 1.35rem; color: var(--navy); letter-spacing: .02em; }
+.brand-s { font-size: .875rem; color: var(--muted); }
+.nav a { padding: 0 12px; color: var(--ink); font-size: 1.0625rem; }
+.nav a[aria-current="page"] { color: var(--navy); font-weight: 600; text-decoration: underline; text-decoration-color: var(--gold); text-decoration-thickness: 2px; text-underline-offset: 7px; }
+.menu-btn { background: var(--navy); color: #fff; border: 0; }
+@media (max-width: 379.98px) { .brand-s { display: none; } }
+.menu-k { font-family: var(--disp); font-size: 1.2rem; }
+.menu-nav a { font: 400 2rem/1.15 var(--disp); border-bottom: 1px solid rgba(255, 255, 255, .18); }
+.menu-nav a[aria-current="page"] { color: #f1d27a; }
+.menu :focus-visible { outline-color: #f1d27a; }
+
+/* úvod a pásy */
+.intro { background: var(--tint); }
+.intro-in { display: flex; align-items: center; gap: 24px; padding-top: 36px; padding-bottom: 36px; }
+.intro img { height: 112px; width: auto; flex: none; }
+.intro-p { margin-top: 8px; color: var(--muted); font-size: 1.15rem; }
+@media (max-width: 519.98px) { .intro-in { flex-direction: column; align-items: flex-start; gap: 16px; } .intro img { height: 84px; } }
+.band { border-top: 1px solid var(--line); }
+.band--first { border-top: 0; }
+.band--tint { background: var(--tint); }
+.band-in { display: grid; gap: 14px; padding-top: 40px; padding-bottom: 44px; }
+.band-in > * { min-width: 0; }
+@media (min-width: 900px) { .band-in { grid-template-columns: 220px minmax(0, 1fr); gap: 48px; padding-top: 56px; padding-bottom: 60px; } .band-l { position: sticky; top: 24px; align-self: start; } }
+.band-l { font-size: 1.05rem; letter-spacing: .14em; text-transform: uppercase; color: var(--navy); }
+.band-l::after { content: ''; display: block; width: 36px; height: 2px; margin-top: 12px; background: var(--gold); }
+.big { font-size: clamp(1.8rem, 4.6vw, 2.7rem); line-height: 1.12; color: var(--navy); }
+.big--s { font-size: clamp(1.5rem, 3.6vw, 2.1rem); margin-bottom: 10px; }
+.meta { margin-top: 6px; color: var(--muted); }
+.meta .cd { font-weight: 600; color: var(--navy); }
+.band .tbl-wrap { margin-top: 12px; }
+.hist { list-style: none; margin: 0; padding: 0; }
+.hist li { padding: 10px 0; border-bottom: 1px solid var(--line); }
+.hist b { color: var(--navy); margin-right: 8px; }
+.kv dt { color: var(--navy); font-family: var(--disp); }
+
+/* zápasy */
+.fx { border-bottom: 1px solid var(--line); }
+.fx-a { grid-template-columns: 56px minmax(0, 1fr) auto; min-height: 58px; padding: 6px 0; }
+.fx-d { font-size: .9375rem; font-weight: 600; color: var(--navy); }
+.fx-dd { font-weight: 400; font-style: italic; font-size: .8125rem; color: var(--muted); }
+.fx-on { font-weight: 600; line-height: 1.25; }
+.fx-k { font-size: .875rem; }
+.fx-t { font-weight: 600; color: var(--navy); }
+.sc { font-weight: 600; min-width: 48px; padding: 2px 8px; }
+.sc--w { background: var(--navy); color: #fff; }
+.sc--d { box-shadow: inset 0 0 0 1px var(--navy); color: var(--navy); }
+.sc--l { color: var(--muted); }
+.sc--n { color: var(--muted); font-size: .875rem; }
+.month-h { font: 400 1.1rem/1.3 var(--disp); letter-spacing: .08em; text-transform: uppercase; color: var(--navy); }
+.form li { font-weight: 600; font-size: .875rem; box-shadow: inset 0 0 0 1px var(--navy); color: var(--navy); }
+.form--w { background: var(--navy); color: #fff; }
+.tbl { font-size: 1rem; }
+.tbl thead th { font: 400 .8125rem/1.2 var(--disp); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); border-bottom: 1px solid var(--ink); }
+.tbl tbody tr { border-bottom: 1px solid var(--line); }
+.tbl .pos { color: var(--muted); }
+.tbl tr.our { background: var(--tint); }
+.tbl tr.our th, .tbl tr.our td { font-weight: 600; color: var(--navy); }
+.toc a { box-shadow: inset 0 0 0 1px var(--navy); color: var(--navy); }
+
+/* podstránky */
+.phead { padding: 34px 0 26px; background: var(--tint); }
+.mc { padding: 22px 20px 16px; background: var(--tint); }
+.mc-label { color: var(--navy); font-weight: 600; }
+.mc-mid { font-size: 2.8rem; color: var(--navy); }
+.mc-name { font-weight: 600; }
+.chip { border: 0; background: var(--tint); color: var(--ink); }
+.chip[aria-pressed="true"] { background: var(--navy); color: #fff; }
+.teams a { border-bottom: 1px solid var(--line); }
+.teams-n { font-size: 1.6rem; color: var(--navy); }
+.teams-s { font-weight: 600; }
+.join { background: var(--tint); }
+.stat b { font-size: 2.2rem; color: var(--navy); }
+.contact-mail { font: 400 clamp(1.4rem, 4.4vw, 2.2rem)/1.2 var(--disp); }
+
+/* päta */
+.ftr { background: var(--navy); color: #d5dcea; }
+.ftr a { color: #fff; }
+.ftr-name { font: 400 1.25rem/1.2 var(--disp); color: #fff; }
+.ftr :focus-visible { outline-color: #f1d27a; }
+.ftr-src { color: #b9c3d9; }
+.ftr-bar { border-top: 1px solid rgba(255, 255, 255, .16); color: #b9c3d9; }
+.demo { background: var(--ink); }
