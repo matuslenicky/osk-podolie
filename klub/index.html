@@ -5,176 +5,48 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-mvnHwz+lJQZdVAYqqUA1AagJMWjuGlUGzmpSslu4MpQ='; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'; manifest-src 'self'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Návrh webu – Klub a kronika | OŠK Podolie</title>
-<meta name="description" content="OŠK Podolie: kronika ročníkov áčka od 2013/14 (jedenásť ročníkov v V. lige), rok 2025 v klube a obec Podolie s erbom svätého Juraja.">
+<title>Návrh webu – Klub | OŠK Podolie</title>
+<meta name="description" content="OŠK Podolie: ročníky áčka od 2013/14, rok 2025 v klube, štadión a obec Podolie so svätým Jurajom v erbe.">
 <meta name="robots" content="noindex">
-<meta property="og:title" content="Návrh webu – Klub a kronika | OŠK Podolie">
+<meta property="og:title" content="Návrh webu – Klub | OŠK Podolie">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="sk_SK">
-<meta name="theme-color" content="#232c7a">
+<meta name="theme-color" content="#1e3e78">
 <link rel="icon" type="image/png" href="../img/favicon.png">
 <link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
-<link rel="preload" href="../fonts/grenze-gotisch-800.woff" as="font" type="font/woff" crossorigin>
-<link rel="preload" href="../fonts/alegreya-sans-400.woff" as="font" type="font/woff" crossorigin>
-<link rel="preload" href="../fonts/alegreya-sans-700.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="../fonts/marcellus-400.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="../fonts/vollkorn-400.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="../fonts/vollkorn-600.woff" as="font" type="font/woff" crossorigin>
 <link rel="stylesheet" href="../css/site.css">
 <script>var d=document.documentElement;d.classList.add('js');if(/[?&](tim|kde)=/.test(location.search)){d.classList.add('flt');addEventListener('load',function(){d.classList.remove('flt')})}</script>
 <script type="module" src="../js/site.mjs"></script>
 </head>
-<body>
+<body class="v2">
 <a class="skip" href="#obsah">Preskočiť na obsah</a>
 <p class="demo">Návrh webu · nie je to oficiálna stránka klubu</p>
-<header class="hdr">
-  <div class="wrap hdr-in">
-    <a class="brand" href="../"><img src="../img/erb-128.webp" alt="" width="40" height="45"><span class="brand-t"><span class="brand-n">OŠK Podolie</span><span class="brand-s">obecný športový klub</span></span><span class="sr">, úvod</span></a>
-    <nav class="nav" aria-label="Hlavné menu"><ul><li><a href="../zapasy/">Zápasy</a></li><li><a href="../tabulky/">Tabuľky</a></li><li><a href="../timy/">Tímy</a></li><li><a href="../mladez/">Mládež</a></li><li><a href="../klub/" aria-current="page">Klub a kronika</a></li><li><a href="../ihrisko/">Ihrisko</a></li><li><a href="../kontakt/">Kontakt</a></li></ul></nav>
-    <button class="menu-btn" type="button" aria-haspopup="dialog" aria-controls="menu"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span>Menu</span></button>
-  </div>
-</header>
-<dialog class="menu" id="menu" aria-label="Menu">
-  <div class="gon">
-    <div class="gon-top"><img src="../img/erb-128.webp" alt="" width="36" height="41" loading="lazy"><span class="gon-n">OŠK Podolie</span><button class="menu-x" type="button" data-close><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg><span>Zavrieť</span></button></div>
-    <nav aria-label="Menu na telefóne"><ul class="gon-nav"><li><a href="../">Úvod</a></li><li><a href="../zapasy/">Zápasy</a></li><li><a href="../tabulky/">Tabuľky</a></li><li><a href="../timy/">Tímy</a></li><li><a href="../mladez/">Mládež</a></li><li><a href="../klub/" aria-current="page">Klub a kronika</a></li><li><a href="../ihrisko/">Ihrisko</a></li><li><a href="../kontakt/">Kontakt</a></li></ul></nav>
-  </div>
-</dialog>
+<header class="hdr hdr--bar"><div class="wrap hdr-in"><a class="brand" href="../"><img src="../img/erb-128.webp" alt="" width="39" height="44"><span class="brand-t"><span class="brand-n">OŠK Podolie</span><span class="brand-s">Obecný športový klub</span></span><span class="sr">, úvod</span></a><nav class="nav" aria-label="Hlavné menu"><ul><li><a href="../zapasy/">Zápasy</a></li><li><a href="../tabulky/">Tabuľky</a></li><li><a href="../timy/">Tímy</a></li><li><a href="../klub/" aria-current="page">Klub</a></li><li><a href="../kontakt/">Kontakt</a></li></ul></nav><button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu" aria-haspopup="dialog"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span>Menu</span></button></div></header>
+<dialog class="menu" id="menu" aria-label="Menu"><div class="menu-in">
+  <div class="menu-top"><span class="menu-k">OŠK Podolie</span><button class="menu-x" type="button" data-close><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg><span>Zavrieť</span></button></div>
+  <ul class="menu-nav"><li><a href="../">Úvod</a></li><li><a href="../zapasy/">Zápasy</a></li><li><a href="../tabulky/">Tabuľky</a></li><li><a href="../timy/">Tímy</a></li><li><a href="../klub/" aria-current="page">Klub</a></li><li><a href="../kontakt/">Kontakt</a></li></ul>
+</div></dialog>
 <main id="obsah">
-<section class="phead"><div class="wrap phead-in">
-  <div><nav class="crumbs" aria-label="Omrvinky"><a href="../">Úvod</a><span aria-current="page">Klub</span></nav>
-  <h1 class="h1"><span aria-hidden="true"><span class="ini">K</span>lub a kronika</span><span class="sr">Klub a kronika</span></h1><p class="phead-sub">Obecný športový klub Podolie, farby erbu modrá, biela a zlatá. Na erbe klubu je erb obce so svätým Jurajom.</p></div>
+<section class="phead"><div class="wrap">
+  <nav class="crumbs" aria-label="Omrvinky"><a href="../">Úvod</a><span aria-current="page">Klub</span></nav>
+  <h1 class="h1">Klub</h1><p class="phead-sub">Obecný športový klub Podolie. Farby modrá, biela a zlatá.</p>
 </div></section>
-<section class="sec sec--first"><div class="wrap klub-grid">
-  <div>
-    <h2 class="h2">Z kroniky</h2>
-    <ol class="annals"><li><p class="annals-y">2013/14</p><div><p>Najstarší ročník na Sportnete: áčko hrá V. ligu Sever a končí ôsme.</p><small>Sportnet</small></div></li><li><p class="annals-y">2021/22</p><div><p>Šieste miesto v V. lige Sever so 64 strelenými gólmi, najlepší výsledok v ročníkoch na Sportnete.</p><small>Sportnet</small></div></li><li><p class="annals-y">2023/24</p><div><p>Po jedenástich ročníkoch v V. lige (Sever a Severozápad) áčko zostupuje do VI. ligy Sever.</p><small>Sportnet</small></div></li><li><p class="annals-y">2025/26</p><div><p>Západoslovenský zväz upravil zloženie VI. ligy Sever: Podolie už necestuje k súperom z okolia Prievidze, hrajú v nej tímy z okolia Trenčína a Považskej Bystrice. Áčko končí deviate.</p><small>Podolské noviny 12/2025, Sportnet</small></div></li><li class="annals-now"><p class="annals-y">2026/27</p><div><p>Áčko hrá VI. ligu Sever a po jeseni je na 11. mieste, mládež U15 a U13 hrá súťaže Oblastného futbalového zväzu Trenčín.</p><small>Sportnet</small></div></li></ol>
-    <p class="note">Rok založenia klubu sme v dostupných zdrojoch nenašli. Doplní ho klub.</p>
-  </div>
-  <aside class="klub-aside">
-    <img src="../img/erb-480.webp" alt="Erb OŠK Podolie, totožný s erbom obce: v modrom štíte strieborný rytier na striebornom koni s červeným chocholom, zlatou kopijou prebodáva zeleného draka" width="160" height="181" loading="lazy">
-    <p class="note">Erb vychádza z pečate obce SIGILLUM POSSESIONIS PODOLA z roku 1743.</p>
-    <h2 class="h4">Míľniky</h2>
-    <ul class="wins"><li><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18M4 22h16M10 14.7V17c0 .6-.5 1-1 1.2C7.8 18.8 7 20.2 7 22M14 14.7V17c0 .6.5 1 1 1.2 1.2.6 2 2 2 3.8M18 2H6v7a6 6 0 0 0 12 0z"/></svg><span><b>2013 – 2024</b> jedenásť ročníkov v V. lige Sever a Severozápad</span></li><li><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18M4 22h16M10 14.7V17c0 .6-.5 1-1 1.2C7.8 18.8 7 20.2 7 22M14 14.7V17c0 .6.5 1 1 1.2 1.2.6 2 2 2 3.8M18 2H6v7a6 6 0 0 0 12 0z"/></svg><span><b>2021/22</b> 6. miesto v V. lige Sever</span></li><li><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18M4 22h16M10 14.7V17c0 .6-.5 1-1 1.2C7.8 18.8 7 20.2 7 22M14 14.7V17c0 .6.5 1 1 1.2 1.2.6 2 2 2 3.8M18 2H6v7a6 6 0 0 0 12 0z"/></svg><span><b>2025</b> Denis Novotný v zostave jesene VI. ligy Sever</span></li></ul>
-  </aside>
-</div></section>
-<section class="sec sec--azure" id="kronika" aria-labelledby="kr2-h"><div class="wrap">
-  <div class="sec-head"><div><p class="eyebrow">Áčko od 2013/14</p><h2 class="h2" id="kr2-h">Kronika ročníkov</h2></div></div>
-  <p class="lead">Dĺžka kopije je konečné umiestnenie: čím dlhšia, tým vyššie. Posledná kopija je rozohraný ročník 2026/27.</p>
-  <ol class="lances"><li class="lance lance--5">
-    <span class="lance-y" aria-hidden="true">2013/14</span>
-    <span class="lance-bar" aria-hidden="true"><span class="lance-s"></span></span>
-    <span class="lance-p" aria-hidden="true">8.<small> zo 16</small></span>
-    <span class="lance-l" aria-hidden="true">V. liga Sever</span>
-    <span class="sr">2013/14, V. liga Sever: 8. miesto zo 16, 44 bodov, skóre 63:54</span>
-  </li><li class="lance lance--4">
-    <span class="lance-y" aria-hidden="true">2014/15</span>
-    <span class="lance-bar" aria-hidden="true"><span class="lance-s"></span></span>
-    <span class="lance-p" aria-hidden="true">10.<small> zo 16</small></span>
-    <span class="lance-l" aria-hidden="true">V. liga Sever</span>
-    <span class="sr">2014/15, V. liga Sever: 10. miesto zo 16, 36 bodov, skóre 43:63</span>
-  </li><li class="lance lance--1">
-    <span class="lance-y" aria-hidden="true">2015/16</span>
-    <span class="lance-bar" aria-hidden="true"><span class="lance-s"></span></span>
-    <span class="lance-p" aria-hidden="true">15.<small> zo 16</small></span>
-    <span class="lance-l" aria-hidden="true">V. liga Sever</span>
-    <span class="sr">2015/16, V. liga Sever: 15. miesto zo 16, 36 bodov, skóre 32:43</span>
-  </li><li class="lance lance--5">
-    <span class="lance-y" aria-hidden="true">2016/17</span>
-    <span class="lance-bar" aria-hidden="true"><span class="lance-s"></span></span>
-    <span class="lance-p" aria-hidden="true">8.<small> zo 16</small></span>
-    <span class="lance-l" aria-hidden="true">V. liga Sever</span>
-    <span class="sr">2016/17, V. liga Sever: 8. miesto zo 16, 39 bodov, skóre 49:52</span>
-  </li><li class="lance lance--3">
-    <span class="lance-y" aria-hidden="true">2017/18</span>
-    <span class="lance-bar" aria-hidden="true"><span class="lance-s"></span></span>
-    <span class="lance-p" aria-hidden="true">12.<small> zo 16</small></span>
-    <span class="lance-l" aria-hidden="true">V. liga Sever</span>
-    <span class="sr">2017/18, V. liga Sever: 12. miesto zo 16, 27 bodov, skóre 40:58</span>
-  </li><li class="lance lance--2">
-    <span class="lance-y" aria-hidden="true">2018/19</span>
-    <span class="lance-bar" aria-hidden="true"><span class="lance-s"></span></span>
-    <span class="lance-p" aria-hidden="true">13.<small> zo 16</small></span>
-    <span class="lance-l" aria-hidden="true">V. liga Sever</span>
-    <span class="sr">2018/19, V. liga Sever: 13. miesto zo 16, 23 bodov, skóre 29:66</span>
-  </li><li class="lance lance--5">
-    <span class="lance-y" aria-hidden="true">2019/20</span>
-    <span class="lance-bar" aria-hidden="true"><span class="lance-s"></span></span>
-    <span class="lance-p" aria-hidden="true">9.<small> zo 16</small></span>
-    <span class="lance-l" aria-hidden="true">V. liga Sever · nedohraná sezóna (pandémia)</span>
-    <span class="sr">2019/20, V. liga Sever: 9. miesto zo 16, 22 bodov, skóre 29:36, nedohraná sezóna (pandémia)</span>
-  </li><li class="lance lance--1">
-    <span class="lance-y" aria-hidden="true">2020/21</span>
-    <span class="lance-bar" aria-hidden="true"><span class="lance-s"></span></span>
-    <span class="lance-p" aria-hidden="true">14.<small> zo 16</small></span>
-    <span class="lance-l" aria-hidden="true">V. liga Sever · nedohraná sezóna (pandémia)</span>
-    <span class="sr">2020/21, V. liga Sever: 14. miesto zo 16, 13 bodov, skóre 23:38, nedohraná sezóna (pandémia)</span>
-  </li><li class="lance lance--7 lance--naj">
-    <span class="lance-y" aria-hidden="true">2021/22</span>
-    <span class="lance-bar" aria-hidden="true"><span class="lance-s"></span></span>
-    <span class="lance-p" aria-hidden="true">6.<small> zo 16</small></span>
-    <span class="lance-l" aria-hidden="true">V. liga Sever · najlepšie umiestnenie v ročníkoch na Sportnete</span>
-    <span class="sr">2021/22, V. liga Sever: 6. miesto zo 16, 50 bodov, skóre 64:49, najlepšie umiestnenie v ročníkoch na Sportnete</span>
-  </li><li class="lance lance--3">
-    <span class="lance-y" aria-hidden="true">2022/23</span>
-    <span class="lance-bar" aria-hidden="true"><span class="lance-s"></span></span>
-    <span class="lance-p" aria-hidden="true">12.<small> zo 16</small></span>
-    <span class="lance-l" aria-hidden="true">V. liga Severozápad</span>
-    <span class="sr">2022/23, V. liga Severozápad: 12. miesto zo 16, 23 bodov, skóre 27:73</span>
-  </li><li class="lance lance--1">
-    <span class="lance-y" aria-hidden="true">2023/24</span>
-    <span class="lance-bar" aria-hidden="true"><span class="lance-s"></span></span>
-    <span class="lance-p" aria-hidden="true">15.<small> zo 16</small></span>
-    <span class="lance-l" aria-hidden="true">V. liga Severozápad · po jedenástich ročníkoch v V. lige zostup</span>
-    <span class="sr">2023/24, V. liga Severozápad: 15. miesto zo 16, 12 bodov, skóre 28:94, po jedenástich ročníkoch v V. lige zostup</span>
-  </li><li class="lance lance--4 lance--vi">
-    <span class="lance-y" aria-hidden="true">2024/25</span>
-    <span class="lance-bar" aria-hidden="true"><span class="lance-s"></span></span>
-    <span class="lance-p" aria-hidden="true">10.<small> zo 16</small></span>
-    <span class="lance-l" aria-hidden="true">VI. liga Sever</span>
-    <span class="sr">2024/25, VI. liga Sever: 10. miesto zo 16, 40 bodov, skóre 41:48</span>
-  </li><li class="lance lance--5 lance--vi">
-    <span class="lance-y" aria-hidden="true">2025/26</span>
-    <span class="lance-bar" aria-hidden="true"><span class="lance-s"></span></span>
-    <span class="lance-p" aria-hidden="true">9.<small> zo 16</small></span>
-    <span class="lance-l" aria-hidden="true">VI. liga Sever</span>
-    <span class="sr">2025/26, VI. liga Sever: 9. miesto zo 16, 42 bodov, skóre 46:50</span>
-  </li><li class="lance lance--2 lance--now lance--vi">
-    <span class="lance-y" aria-hidden="true">2026/27</span>
-    <span class="lance-bar" aria-hidden="true"><span class="lance-s"></span></span>
-    <span class="lance-p" aria-hidden="true">11.<small> zo 14</small></span>
-    <span class="lance-l" aria-hidden="true">VI. liga Sever · priebežne</span>
-    <span class="sr">2026/27, VI. liga Sever: 11. miesto zo 14, priebežne</span>
-  </li></ol>
-  <div class="tbl-wrap tbl-wrap--inv"><table class="tbl tbl--kr"><caption class="sr">Ročníky áčka od 2013/14</caption>
-    <thead><tr><th scope="col" class="tl">Ročník</th><th scope="col" class="tl">Súťaž</th><th scope="col">Miesto</th><th scope="col" class="hm">Skóre</th><th scope="col">Body</th></tr></thead>
-    <tbody><tr><th scope="row" class="tl">2013/14</th><td class="tl">V. liga Sever</td><td class="nw">8. zo 16</td><td class="hm nw">63:54</td><td>44</td></tr><tr><th scope="row" class="tl">2014/15</th><td class="tl">V. liga Sever</td><td class="nw">10. zo 16</td><td class="hm nw">43:63</td><td>36</td></tr><tr><th scope="row" class="tl">2015/16</th><td class="tl">V. liga Sever</td><td class="nw">15. zo 16</td><td class="hm nw">32:43</td><td>36</td></tr><tr><th scope="row" class="tl">2016/17</th><td class="tl">V. liga Sever</td><td class="nw">8. zo 16</td><td class="hm nw">49:52</td><td>39</td></tr><tr><th scope="row" class="tl">2017/18</th><td class="tl">V. liga Sever</td><td class="nw">12. zo 16</td><td class="hm nw">40:58</td><td>27</td></tr><tr><th scope="row" class="tl">2018/19</th><td class="tl">V. liga Sever</td><td class="nw">13. zo 16</td><td class="hm nw">29:66</td><td>23</td></tr><tr><th scope="row" class="tl">2019/20</th><td class="tl">V. liga Sever<small>nedohraná sezóna (pandémia)</small></td><td class="nw">9. zo 16</td><td class="hm nw">29:36</td><td>22</td></tr><tr><th scope="row" class="tl">2020/21</th><td class="tl">V. liga Sever<small>nedohraná sezóna (pandémia)</small></td><td class="nw">14. zo 16</td><td class="hm nw">23:38</td><td>13</td></tr><tr class="our"><th scope="row" class="tl">2021/22</th><td class="tl">V. liga Sever<small>najlepšie umiestnenie v ročníkoch na Sportnete</small></td><td class="nw">6. zo 16</td><td class="hm nw">64:49</td><td>50</td></tr><tr><th scope="row" class="tl">2022/23</th><td class="tl">V. liga Severozápad</td><td class="nw">12. zo 16</td><td class="hm nw">27:73</td><td>23</td></tr><tr><th scope="row" class="tl">2023/24</th><td class="tl">V. liga Severozápad<small>po jedenástich ročníkoch v V. lige zostup</small></td><td class="nw">15. zo 16</td><td class="hm nw">28:94</td><td>12</td></tr><tr><th scope="row" class="tl">2024/25</th><td class="tl">VI. liga Sever</td><td class="nw">10. zo 16</td><td class="hm nw">41:48</td><td>40</td></tr><tr><th scope="row" class="tl">2025/26</th><td class="tl">VI. liga Sever</td><td class="nw">9. zo 16</td><td class="hm nw">46:50</td><td>42</td></tr></tbody>
-  </table></div>
-  <p class="src src--inv">Zdroj: konečné tabuľky zo Sportnetu.</p>
-</div></section>
-<section class="sec" aria-labelledby="y2-h"><div class="wrap year">
-  <div>
-    <div class="sec-head"><div><p class="eyebrow">Z Podolských novín</p><h2 class="h2" id="y2-h">Rok 2025 v klube</h2></div></div>
-    <ol class="notes"><li><p class="note-k">Áčko</p><p>Po jeseni 2025 prezimovalo na 8. mieste VI. ligy Sever. Najlepším hráčom jesene bol Denis Novotný, vybrali ho aj do zostavy jesene celej súťaže.</p></li><li><p class="note-k">Odchovanci</p><p>Do áčka sa zapracúvajú hráči, ktorí v Podolí začínali alebo odohrali mládežnícke kategórie: Vrba, Hutta, Novotný a brankár Ohrablo, vekom ešte dorastenec.</p></li><li><p class="note-k">Mládež</p><p>Prípravka U11 skončila v ročníku 2024/25 šiesta z 13 tímov a na Memoriáli Daniela Šima v Bošáci tretia po výhre 9:1 v zápase o 3. miesto.</p></li><li><p class="note-k">Hody</p><p>Letná príprava sa začína tradičným hodovým zápasom v Očkove. V roku 2025 sa skončil 5:5.</p></li></ol>
-  </div>
-  <blockquote class="quote"><p>„Stále tvrdím, že mať stabilnú mládežnícku základňu je najpodstatnejšie pre prežitie amatérskeho, dedinského futbalu.“</p><footer>prezident klubu v Podolských novinách</footer></blockquote>
-</div></section>
-<section class="sec sec--vellum" id="obec" aria-labelledby="ob2-h"><div class="wrap">
-  <div class="sec-head"><div><p class="eyebrow">Pod Malými Karpatmi</p><h2 class="h2" id="ob2-h">Obec Podolie</h2></div></div>
-  <ol class="glosy"><li><p class="glosy-n" aria-hidden="true">I</p><div><p class="glosy-k">1332</p><p>Prvá písomná zmienka: v súpise pápežských desiatkov sa v Podolí uvádza farár Mikuláš.</p></div></li><li><p class="glosy-n" aria-hidden="true">II</p><div><p class="glosy-k">1743</p><p>Pečať obce SIGILLUM POSSESIONIS PODOLA so svätým Jurajom. Z nej vychádza dnešný erb, ktorý nosí aj futbalový klub.</p></div></li><li><p class="glosy-n" aria-hidden="true">III</p><div><p class="glosy-k">Kostol sv. Juraja</p><p>Kostol spomínaný už začiatkom 14. storočia stojí na vyvýšenine nad Podolským potokom. V 17. storočí ho obohnali kamenným múrom so strieľňami, pravdepodobne po roku 1663, keď osmanské vojsko obsadilo Nové Zámky.</p></div></li><li><p class="glosy-n" aria-hidden="true">IV</p><div><p class="glosy-k">2 200 pred n. l.</p><p>V polohe Horné Brežné preskúmali archeológovia v roku 1963 opevnené sídlisko bošáckej skupiny z konca neskorej doby kamennej.</p></div></li><li><p class="glosy-n" aria-hidden="true">V</p><div><p class="glosy-k">Park miniatúr</p><p>Od roku 2003, keď pokrstili prvý model, hrad Branč, vyrástlo v Podolí viac ako sto modelov hradov a zámkov. Ročne ich príde pozrieť okolo 35 000 ľudí.</p></div></li></ol>
-  <p class="src">Zdroj: web obce Podolie, Park miniatúr podľa Podolských novín 12/2025. Správy z klubu vychádzajú v <a href="https://www.podolie.sk/podolske-noviny/" rel="noopener">Podolských novinách</a>.</p>
-</div></section>
+<section class="band band--first" aria-labelledby="h-h"><div class="wrap band-in"><h2 class="band-l" id="h-h">História</h2><div class="band-r"><ol class="hist"><li><b>2013/14</b> Najstarší ročník na Sportnete: áčko hrá V. ligu Sever a končí ôsme.</li><li><b>2021/22</b> Šieste miesto v V. lige Sever so 64 strelenými gólmi, najlepší výsledok v ročníkoch na Sportnete.</li><li><b>2023/24</b> Po jedenástich ročníkoch v V. lige (Sever a Severozápad) áčko zostupuje do VI. ligy Sever.</li><li><b>2025/26</b> Západoslovenský zväz upravil zloženie VI. ligy Sever: Podolie už necestuje k súperom z okolia Prievidze, hrajú v nej tímy z okolia Trenčína a Považskej Bystrice. Áčko končí deviate.</li></ol></div></div></section>
+<section class="band" aria-labelledby="r-h"><div class="wrap band-in"><h2 class="band-l" id="r-h">Ročníky</h2><div class="band-r"><div class="tbl-wrap"><table class="tbl tbl--roc"><caption class="sr">Ročníky áčka</caption>
+  <thead><tr><th scope="col" class="tl">Ročník</th><th scope="col" class="tl">Súťaž</th><th scope="col">Miesto</th><th scope="col" class="hm">Skóre</th><th scope="col">Body</th></tr></thead>
+  <tbody><tr><th scope="row" class="tl">2013/14</th><td class="tl">V. liga Sever</td><td class="nw">8.<span> zo 16</span></td><td class="hm nw">63:54</td><td>44</td></tr><tr><th scope="row" class="tl">2014/15</th><td class="tl">V. liga Sever</td><td class="nw">10.<span> zo 16</span></td><td class="hm nw">43:63</td><td>36</td></tr><tr><th scope="row" class="tl">2015/16</th><td class="tl">V. liga Sever</td><td class="nw">15.<span> zo 16</span></td><td class="hm nw">32:43</td><td>36</td></tr><tr><th scope="row" class="tl">2016/17</th><td class="tl">V. liga Sever</td><td class="nw">8.<span> zo 16</span></td><td class="hm nw">49:52</td><td>39</td></tr><tr><th scope="row" class="tl">2017/18</th><td class="tl">V. liga Sever</td><td class="nw">12.<span> zo 16</span></td><td class="hm nw">40:58</td><td>27</td></tr><tr><th scope="row" class="tl">2018/19</th><td class="tl">V. liga Sever</td><td class="nw">13.<span> zo 16</span></td><td class="hm nw">29:66</td><td>23</td></tr><tr><th scope="row" class="tl">2019/20</th><td class="tl">V. liga Sever<small>nedohraná sezóna (pandémia)</small></td><td class="nw">9.<span> zo 16</span></td><td class="hm nw">29:36</td><td>22</td></tr><tr><th scope="row" class="tl">2020/21</th><td class="tl">V. liga Sever<small>nedohraná sezóna (pandémia)</small></td><td class="nw">14.<span> zo 16</span></td><td class="hm nw">23:38</td><td>13</td></tr><tr class="our"><th scope="row" class="tl">2021/22</th><td class="tl">V. liga Sever<small>najlepšie umiestnenie v ročníkoch na Sportnete</small></td><td class="nw">6.<span> zo 16</span></td><td class="hm nw">64:49</td><td>50</td></tr><tr><th scope="row" class="tl">2022/23</th><td class="tl">V. liga Severozápad</td><td class="nw">12.<span> zo 16</span></td><td class="hm nw">27:73</td><td>23</td></tr><tr><th scope="row" class="tl">2023/24</th><td class="tl">V. liga Severozápad<small>po jedenástich ročníkoch v V. lige zostup</small></td><td class="nw">15.<span> zo 16</span></td><td class="hm nw">28:94</td><td>12</td></tr><tr><th scope="row" class="tl">2024/25</th><td class="tl">VI. liga Sever</td><td class="nw">10.<span> zo 16</span></td><td class="hm nw">41:48</td><td>40</td></tr><tr><th scope="row" class="tl">2025/26</th><td class="tl">VI. liga Sever</td><td class="nw">9.<span> zo 16</span></td><td class="hm nw">46:50</td><td>42</td></tr></tbody>
+</table></div></div></div></section>
+<section class="band" aria-labelledby="u-h"><div class="wrap band-in"><h2 class="band-l" id="u-h">Úspechy</h2><div class="band-r"><ul class="hist"><li><b>2013 – 2024</b> jedenásť ročníkov v V. lige Sever a Severozápad</li><li><b>2021/22</b> 6. miesto v V. lige Sever</li><li><b>2025</b> Denis Novotný v zostave jesene VI. ligy Sever</li></ul></div></div></section>
+<section class="band band--tint" aria-labelledby="s-h"><div class="wrap band-in"><h2 class="band-l" id="s-h">Štadión</h2><div class="band-r"><p class="meta">Futbalový štadión OŠK Podolie, Hlavná</p><dl class="kv"><div><dt>Trávnik</dt><dd>O hraciu plochu sa stará tréner áčka, v sezóne ju kosí trikrát do týždňa. Celú letnú prípravu odohralo áčko doma na vlastnej tráve.</dd></div><div><dt>Zima</dt><dd>Zimná príprava áčka beží na multifunkčnom ihrisku a škvárovom ovále, mládež trénuje v telocvični základnej školy.</dd></div><div><dt>Umelá tráva</dt><dd>V areáli školy vzniklo nové športovisko s ihriskom s umelou trávou a atletickou dráhou, klub ho chce využiť aj pre mládež.</dd></div></dl></div></div></section>
+<section class="band" aria-labelledby="o-h"><div class="wrap band-in"><h2 class="band-l" id="o-h">Podolie</h2><div class="band-r"><dl class="kv"><div><dt>1332</dt><dd>Prvá písomná zmienka: v súpise pápežských desiatkov sa v Podolí uvádza farár Mikuláš.</dd></div><div><dt>1743</dt><dd>Pečať obce SIGILLUM POSSESIONIS PODOLA so svätým Jurajom. Z nej vychádza dnešný erb, ktorý nosí aj futbalový klub.</dd></div><div><dt>Kostol sv. Juraja</dt><dd>Kostol spomínaný už začiatkom 14. storočia stojí na vyvýšenine nad Podolským potokom. V 17. storočí ho obohnali kamenným múrom so strieľňami, pravdepodobne po roku 1663, keď osmanské vojsko obsadilo Nové Zámky.</dd></div><div><dt>2 200 pred n. l.</dt><dd>V polohe Horné Brežné preskúmali archeológovia v roku 1963 opevnené sídlisko bošáckej skupiny z konca neskorej doby kamennej.</dd></div><div><dt>Park miniatúr</dt><dd>Od roku 2003, keď pokrstili prvý model, hrad Branč, vyrástlo v Podolí viac ako sto modelov hradov a zámkov. Ročne ich príde pozrieť okolo 35 000 ľudí.</dd></div></dl><p class="note">Zdroje: Podolské noviny 12/2025, web obce Podolie, Sportnet.</p></div></div></section>
 </main>
-<footer class="ftr">
-  <div class="ftr-flags" aria-hidden="true"></div>
-  <div class="wrap ftr-grid">
-    <div class="ftr-club">
-      <img src="../img/erb-240.webp" alt="" width="64" height="72" loading="lazy">
-      <p class="ftr-name">OŠK Podolie</p>
-      <p class="ftr-motto">Futbal v Podolí pod erbom so svätým Jurajom.</p>
-    </div>
-    <div><h2 class="ftr-h">Ihrisko</h2><p>Futbalový štadión OŠK Podolie<br>Hlavná, 916 22 Podolie</p><p><a href="https://www.google.com/maps/search/?api=1&query=48.6767715,17.7682386" rel="noopener">Navigovať na ihrisko</a></p><p>Najbližšie doma: <a href="../zapasy/2027-03-28-a-tj-spartak-lysa-pod-makytou/">28. 3. o 15:00 proti TJ Spartak Lysá pod Makytou</a></p></div>
-    <div><h2 class="ftr-h">Kontakt</h2><p>Obecný športový klub Podolie<br><a href="mailto:tom.bobocky@gmail.com">tom.bobocky<wbr>@gmail.com</a></p></div>
-    <div><h2 class="ftr-h">Zdroje</h2><p>Výsledky zo Sportnetu (Futbalnet), aktualizované 17. 11. 2026. Správy z klubu podľa Podolských novín, obec podľa webu obce.</p><p><a href="https://sportnet.sme.sk/futbalnet/k/osk-podolie/" rel="noopener">Klub na Sportnete</a></p></div>
-  </div>
-  <div class="ftr-bar"><div class="wrap ftr-bar-in"><span>© 2026 Obecný športový klub Podolie</span><a href="../ochrana-sukromia/">Ochrana súkromia</a><a href="../admin/">Administrácia (ukážka)</a></div></div>
-</footer>
+<footer class="ftr"><div class="wrap ftr-in">
+  <div class="ftr-id"><img src="../img/erb-128.webp" alt="" width="42" height="48" loading="lazy"><div><p class="ftr-name">OŠK Podolie</p><p>Futbalový štadión OŠK Podolie, Hlavná, 916 22 Podolie</p></div></div>
+  <ul class="ftr-links"><li><a href="https://www.google.com/maps/search/?api=1&query=48.6767715,17.7682386" rel="noopener">Navigovať na ihrisko</a></li><li><a href="mailto:tom.bobocky@gmail.com">tom.bobocky<wbr>@gmail.com</a></li><li><a href="https://sportnet.sme.sk/futbalnet/k/osk-podolie/" rel="noopener">Sportnet</a></li></ul>
+  <p class="ftr-src">Výsledky zo Sportnetu, aktualizované 17. 11. 2026. Správy z klubu podľa Podolských novín, obec podľa webu obce.</p>
+</div><div class="wrap ftr-bar"><span>© 2026 Obecný športový klub Podolie</span><a href="../ochrana-sukromia/">Ochrana súkromia</a><a href="../admin/">Administrácia (ukážka)</a></div></footer>
 </body>
 </html>

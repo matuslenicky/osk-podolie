@@ -1,16 +1,15 @@
-// Správanie webu OŠK Podolie (bez knižníc): menu ako zástava, filtre zápasov, odpočet, kalendár.
+// Správanie klubového webu (bez knižníc): menu v dialógu, filtre zápasov, odpočet do výkopu, kalendár.
 const $ = (s, el = document) => el.querySelector(s);
 const $$ = (s, el = document) => [...el.querySelectorAll(s)];
 
-// ---- menu na telefóne: modálny <dialog> ako zástava spustená z hlavičky (Esc a „Zavrieť“ ho zatvoria, fokus sa vráti na tlačidlo) ----
+// ---- menu na telefóne: modálny <dialog> cez celú obrazovku (Esc, „Zavrieť“ a klik na odkaz ho zatvoria, fokus sa vráti na tlačidlo) ----
 const menuBtn = $('.menu-btn'), menu = $('#menu');
 if (menuBtn && menu && typeof menu.showModal === 'function') {
   const close = () => { if (menu.open) menu.close(); };
-  menuBtn.addEventListener('click', () => { menu.showModal(); document.documentElement.classList.add('menu-open'); });
-  menu.addEventListener('close', () => { document.documentElement.classList.remove('menu-open'); menuBtn.focus(); });
+  menuBtn.addEventListener('click', () => { menu.showModal(); menuBtn.setAttribute('aria-expanded', 'true'); document.documentElement.classList.add('menu-open'); });
+  menu.addEventListener('close', () => { menuBtn.setAttribute('aria-expanded', 'false'); document.documentElement.classList.remove('menu-open'); menuBtn.focus(); });
   $('[data-close]', menu).addEventListener('click', close);
-  // klik na odkaz alebo na stmavené pozadie: cieľ je vtedy samotný <dialog> – mimo jeho obdĺžnika, v priehľadných okrajoch
-  // vedľa zástavy alebo v záreze lastovičieho chvosta (clip-path prepustí klik na <dialog>)
+  // klik na odkaz alebo mimo panelu (cieľom je samotný <dialog>) menu zavrie
   menu.addEventListener('click', (e) => {
     if (e.target.closest('a')) return close();
     if (e.target === menu) close();
